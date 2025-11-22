@@ -28,8 +28,8 @@ const countries = [
 const cities = [
   // Pakistan
   { name: "Lahore", country: "Pakistan", places: 265, timeAgo: "Today", cover: "assets/img/travel/lahore.jpg" },
-  { name: "Islamabad", country: "Pakistan", places: 3, timeAgo: "5 months ago", cover: "assets/img/travel/islamabad.jpg" },
-  { name: "Murree", country: "Pakistan", places: 1, timeAgo: "5 months ago", cover: "assets/img/travel/murree.jpg" },
+  { name: "Islamabad", country: "Pakistan", places: 3, timeAgo: "5 months ago", cover: "assets/img/travel/lahore.jpg" },
+  { name: "Murree", country: "Pakistan", places: 1, timeAgo: "5 months ago", cover: "assets/img/travel/lahore.jpg" },
   { name: "Raiwind", country: "Pakistan", places: 1, timeAgo: "4 years ago", cover: "assets/img/travel/riyadh.jpg" },
   
   // Singapore
@@ -216,32 +216,183 @@ function renderCities() {
     .join("");
 }
 
+// Original travel posts with photos and descriptions
+const travelPosts = [
+  {
+    title: "Phuket",
+    date: "March 2025",
+    location: "Phuket, Thailand",
+    excerpt: "A sun-kissed island adventure with a close friend, exploring winding coastal paths on a motorbike, enjoying Thai cuisine, and discovering the delightful 7-Eleven culture.",
+    tags: ["Thailand", "Adventure"],
+    cover: "assets/img/travel/phuket.jpg",
+  },
+  {
+    title: "Amsterdam",
+    date: "December 2024",
+    location: "Amsterdam, Netherlands",
+    excerpt: "Exploring the artistic heritage, intricate canal system, and cultural attractions. Visited the Van Gogh Museum and Anne Frank House, experiencing the city's unique charm.",
+    tags: ["Netherlands", "Culture"],
+    cover: "assets/img/travel/amsterdam.jpg",
+  },
+  {
+    title: "Paris",
+    date: "December 2024",
+    location: "Paris, France",
+    excerpt: "My first non-conference visit to this iconic destination. Wandered through Montmartre, visited the Louvre, and enjoyed breathtaking views from the Eiffel Tower.",
+    tags: ["France", "Culture"],
+    cover: "assets/img/travel/paris.jpg",
+  },
+  {
+    title: "Liverpool",
+    date: "July 2024",
+    location: "Liverpool, UK",
+    excerpt: "A trip blending professional conference engagements with leisure exploration. Visited The Beatles Statue, explored the city's architecture, and ventured to Sheffield's mountains.",
+    tags: ["UK", "Conference"],
+    cover: "assets/img/travel/liverpool.jpg",
+  },
+  {
+    title: "Hong Kong",
+    date: "2024",
+    location: "Hong Kong",
+    excerpt: "Walking the vibrant streets after a refreshing rain shower, surrounded by neon glow and the rich scent of rain-soaked concrete. A dive into the heart of Hong Kong's living, breathing urban culture.",
+    tags: ["Hong Kong", "Urban"],
+    cover: "assets/img/travel/hong-kong.jpg",
+  },
+  {
+    title: "Melbourne",
+    date: "2023",
+    location: "Melbourne, Australia",
+    excerpt: "Morning runs along the Yarra River and coastal walkways, with the rhythmic sound of footsteps mingling with seabird calls. A meditation and reflection on life's journey.",
+    tags: ["Australia", "Nature"],
+    cover: "assets/img/travel/melbourne.jpg",
+  },
+  {
+    title: "London",
+    date: "Mar - Aug 2023",
+    location: "London, UK",
+    excerpt: "As a visiting researcher, I collaborated with brilliant minds at local universities. Explored Piccadilly Circus, Hyde Park, the British Museum, and enjoyed the city's vibrant energy.",
+    tags: ["UK", "Research"],
+    cover: "assets/img/travel/london.jpg",
+  },
+  {
+    title: "Milan",
+    date: "2023",
+    location: "Milan, Italy",
+    excerpt: "Staying with my brother and niece Hayal, exploring bustling piazzas, enjoying Italian cuisine, and marveling at the Duomo. A vibrant tableau of joy, family, and culinary adventure.",
+    tags: ["Italy", "Family"],
+    cover: "assets/img/travel/milan.jpg",
+  },
+  {
+    title: "Venice",
+    date: "2023",
+    location: "Venice, Italy",
+    excerpt: "Cycling through the dreamlike city floating on its network of canals. Indulging in dark chocolate Italian gelato and experiencing Venice by bike, boat, and taste.",
+    tags: ["Italy", "Adventure"],
+    cover: "assets/img/travel/venice.jpg",
+  },
+  {
+    title: "Copenhagen",
+    date: "2023",
+    location: "Copenhagen, Denmark",
+    excerpt: "Experiencing Scandinavian flair with minimalist yet colorful architecture, expansive green parks, and a palpable sense of design. The friendliness of the Danes made it feel like home.",
+    tags: ["Denmark", "Culture"],
+    cover: "assets/img/travel/copenhagen.jpg",
+  },
+  {
+    title: "Dubai",
+    date: "2023",
+    location: "Dubai, UAE",
+    excerpt: "Visiting my sister and niece Soha in this dazzling city. Exploring from the Burj Khalifa to artificial islands, marveling at Dubai's transformation and ambition.",
+    tags: ["UAE", "Family"],
+    cover: "assets/img/travel/dubai.jpg",
+  },
+  {
+    title: "Istanbul",
+    date: "2023",
+    location: "Istanbul, Turkey",
+    excerpt: "A city straddling two continents, alive with countless cats and ancient cobblestone pavements. Exploring the Blue Mosque, Grand Bazaar, and indulging in Turkish coffee and baklava.",
+    tags: ["Turkey", "Culture"],
+    cover: "assets/img/travel/istanbul.jpg",
+  },
+  {
+    title: "Bangkok",
+    date: "2023",
+    location: "Bangkok, Thailand",
+    excerpt: "Hosted by my friend Earth and his girlfriend Aoy. Exploring colorful markets, golden temples, and enjoying street food. Extended adventures to Pattaya's stunning beaches.",
+    tags: ["Thailand", "Friends"],
+    cover: "assets/img/travel/bangkok.jpg",
+  },
+  {
+    title: "Riyadh",
+    date: "2023",
+    location: "Riyadh, Saudi Arabia",
+    excerpt: "Reuniting with my old friend Tabish and exploring the dynamic city. Performing Umrah, a profound spiritual journey at the Grand Mosque, adding deep significance to my visit.",
+    tags: ["Saudi Arabia", "Spiritual"],
+    cover: "assets/img/travel/riyadh.jpg",
+  },
+  {
+    title: "Prague",
+    date: "2023",
+    location: "Prague, Czech Republic",
+    excerpt: "A brief but memorable visit with stunning architecture and pristine streets. Clear skies and gentle breeze made walking through the historic city center a sheer delight.",
+    tags: ["Czech Republic", "Architecture"],
+    cover: "assets/img/travel/prague.jpg",
+  },
+  {
+    title: "Dresden",
+    date: "2023",
+    location: "Dresden, Germany",
+    excerpt: "Attending a conference in this city steeped in history. Breathtaking landscapes with iconic castles, expansive rivers, and serene morning runs along the Elbe.",
+    tags: ["Germany", "Conference"],
+    cover: "assets/img/travel/dresden.jpg",
+  },
+  {
+    title: "Oldenburg",
+    date: "2023",
+    location: "Oldenburg, Germany",
+    excerpt: "Visiting my uncle in this quiet, charming small city. Traditional German architecture, small cafes, and a perfect space for reflection and connection with family.",
+    tags: ["Germany", "Family"],
+    cover: "assets/img/travel/oldenburg.jpg",
+  },
+  {
+    title: "Kuala Lumpur",
+    date: "Ongoing",
+    location: "Kuala Lumpur, Malaysia",
+    excerpt: "A frequent destination from Singapore. Embracing the Malay language, enjoying nasi lemak, satay, and roti canai. A place that resonates with my spirit, offering new experiences with every visit.",
+    tags: ["Malaysia", "Food"],
+    cover: "assets/img/travel/kuala-lumpur.jpg",
+  },
+];
+
 // Render travel posts (featured/highlighted cities)
 function renderTravelPosts() {
   const container = document.getElementById("travelPosts");
   if (!container) return;
 
-  // Get all cities sorted by places (descending)
-  const topCities = [...cities]
-    .sort((a, b) => b.places - a.places);
-
-  container.innerHTML = topCities
+  container.innerHTML = travelPosts
     .map(
-      (city) => `
+      (post) => `
       <div class="col-md-6 col-lg-3">
         <article class="post-card h-100">
-          ${city.cover 
-            ? `<div class="post-cover" style="background-image:url('${city.cover}');"></div>`
+          ${post.cover 
+            ? `<div class="post-cover" style="background-image:url('${post.cover}');"></div>`
             : `<div class="post-cover d-flex align-items-center justify-content-center bg-light">
                 <i class="fa-solid fa-image fa-3x text-muted"></i>
               </div>`
           }
           <div class="post-body">
-            <div class="mb-2">
-              <span class="badge bg-primary-subtle text-primary">${city.places} places</span>
+            <p class="text-uppercase small text-muted mb-1">${post.date}</p>
+            <h3 class="h5 fw-semibold">${post.title}</h3>
+            <p class="text-muted mb-2">${post.excerpt}</p>
+            <p class="small text-primary fw-semibold">${post.location}</p>
+            <div class="d-flex flex-wrap gap-2">
+              ${post.tags
+                .map(
+                  (tag) =>
+                    `<span class="badge rounded-pill text-bg-light border">${tag}</span>`
+                )
+                .join("")}
             </div>
-            <h3 class="h5 fw-semibold mb-1">${city.name}</h3>
-            <p class="text-muted small mb-0">${city.country}</p>
           </div>
         </article>
       </div>`
