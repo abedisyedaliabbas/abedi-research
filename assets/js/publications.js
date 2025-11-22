@@ -1,0 +1,527 @@
+// Metrics from Google Scholar: https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en
+const publicationMetrics = {
+  citations: 379,
+  hIndex: 9,
+};
+
+const publicationFilters = ["Journal", "Conference", "Preprint", "Thesis"];
+
+// Publications from Google Scholar: https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en
+const publications = [
+  {
+    type: "Conference",
+    year: 2025,
+    title: "Global Young Scientists Summit",
+    venue: "NUS, Singapore",
+    authors: "S. A. A. Abedi",
+    doi: "https://gyss.nrf.gov.sg/highlights/gyss2025/",
+    summary: "Participated at the Global Young Scientists Summit 2025 in Singapore.",
+    presentationType: "Participated",
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Super-photostable organic dye for long-term live-cell single-protein imaging",
+    venue: "Nature Methods",
+    authors: "DH Kim, HM Triet, SH Lee, S Jazani, S Jang, SAA Abedi, X Liu, J Seo, ...",
+    doi: "https://www.nature.com/articles/s41592-024-02584-0",
+    summary: "Development of a super-photostable organic dye enabling long-term live-cell single-protein imaging.",
+    citations: 10,
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "\"Superimposed\" spectral characteristics of fluorophores arising from cross-conjugation hybridization",
+    venue: "Chinese Chemical Letters",
+    authors: "K An, Q Qiao, SAA Abedi, X Liu, Z Xu",
+    doi: "https://www.sciencedirect.com/science/article/abs/pii/S100184172400305X",
+    summary: "Investigation of spectral characteristics in fluorophores through cross-conjugation hybridization.",
+    citations: 6,
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "\"Clicked\" Hydrazone Photoswitches",
+    venue: "Journal of the American Chemical Society",
+    authors: "D Sosnin, M Izadyar, SAA Abedi, X Liu, I Aprahamian",
+    doi: "https://pubs.acs.org/doi/abs/10.1021/jacs.5c02183",
+    summary: "Development of clicked hydrazone photoswitches for molecular switching applications.",
+    citations: 5,
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Oxazolidine-Caged Heptamethine Cyanine Switch Exhibits High Photostability for Bioimaging via Buffering Fluorogenicity",
+    venue: "CCS Chemistry",
+    authors: "Q Qi, J Li, Q Qiao, C Yan, M Izadyar, C Wang, SAA Abedi, X Liu, Z Guo, ...",
+    doi: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.025.202405383",
+    summary: "High photostability oxazolidine-caged heptamethine cyanine switch for bioimaging applications.",
+    citations: 3,
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Moisture Tolerance, Thermally Stable and Light Switchable Adhesives Platform Based on Reversible Redshifted [2+ 2] Photocycloaddition",
+    venue: "Advanced Functional Materials",
+    authors: "XY Oh, QV Thi, MML Yu, M Izadyar, SAA Abedi, X Liu, VX Truong",
+    doi: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202421823",
+    summary: "Development of moisture-tolerant, thermally stable light-switchable adhesives using reversible photocycloaddition.",
+    citations: 2,
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Hetero‐Hydrazone Photoswitches",
+    venue: "Angewandte Chemie",
+    authors: "D Sosnin, SAA Abedi, M Izadyar, Y Ünal, X Liu, I Aprahamian",
+    doi: "https://onlinelibrary.wiley.com/doi/abs/10.1002/ange.202515136",
+    summary: "Design and characterization of hetero-hydrazone photoswitches.",
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Unveiling the Power of Dark State Photocages: An Efficient Pathway to Triplet State Under Near‐Infrared Light Irradiation",
+    venue: "Angewandte Chemie",
+    authors: "Q Hu, J Du, SAA Abedi, X Liu, S Long, W Sun, J Fan, X Peng",
+    doi: "https://onlinelibrary.wiley.com/doi/abs/10.1002/ange.202504670",
+    summary: "Dark state photocages enabling efficient triplet state generation under near-infrared light.",
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Highly stable electrofluorochromic switching of aggregation-induced emission-active conjugated polymers",
+    venue: "Materials Chemistry Frontiers",
+    authors: "R Tao, BYK Hui, KLO Chin, XYD Soo, D Zhang, SAA Abedi, P Bi, X Liu, ...",
+    doi: "https://pubs.rsc.org/en/content/articlehtml/2025/qm/d5qm00035a",
+    summary: "Highly stable electrofluorochromic switching in aggregation-induced emission-active conjugated polymers.",
+  },
+  {
+    type: "Journal",
+    year: 2024,
+    title: "Aryl‐Modified Pentamethyl Cyanine Dyes at the C2'Position: A Tunable Platform for Activatable Photosensitizers",
+    venue: "Advanced Science",
+    authors: "F Han, SA Abbas Abedi, S He, H Zhang, S Long, X Zhou, ...",
+    doi: "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202305761",
+    summary: "Aryl-modified pentamethyl cyanine dyes as tunable platforms for activatable photosensitizers.",
+    citations: 26,
+  },
+  {
+    type: "Journal",
+    year: 2024,
+    title: "Solvatochromic fluorescent ethynyl naphthalimide derivatives for detection of water in organic solvents",
+    venue: "Dyes and Pigments",
+    authors: "QPN Nhu, SAA Abedi, S Chanmungkalakul, M Sukwattanasinitt, ...",
+    doi: "https://www.sciencedirect.com/science/article/abs/pii/S0143720824002535",
+    summary: "Solvatochromic fluorescent ethynyl naphthalimide derivatives for water detection in organic solvents.",
+    citations: 11,
+  },
+  {
+    type: "Journal",
+    year: 2024,
+    title: "The dark side of cyclooctatetraene (COT): photophysics in the singlet states of \"self-healing\" dyes",
+    venue: "Chinese Chemical Letters",
+    authors: "S Chanmungkalakul, SAA Abedi, FJ Hernandez, J Xu, X Liu",
+    doi: "https://www.sciencedirect.com/science/article/abs/pii/S1001841723009786",
+    summary: "Investigation of photophysics in singlet states of self-healing dyes containing cyclooctatetraene.",
+    citations: 9,
+  },
+  {
+    type: "Journal",
+    year: 2024,
+    title: "Conformational Folding Activates Photoinduced Electron Transfer",
+    venue: "CCS Chemistry",
+    authors: "S Huang, SAA Abedi, Z Li, R Huang, X Yan, M Izadyar, Q Qiao, Y Fang, ...",
+    doi: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.024.202404541",
+    summary: "Conformational folding mechanisms activating photoinduced electron transfer processes.",
+    citations: 7,
+  },
+  {
+    type: "Conference",
+    year: 2024,
+    title: "Interdisciplinary Medicine Young Scholars Forum on Biomedical Applications of Molecular Probes",
+    venue: "Singapore",
+    authors: "S. A. A. Abedi",
+    doi: "",
+    summary: "Invited speaker at the Interdisciplinary Medicine Young Scholars Forum on Biomedical Applications of Molecular Probes.",
+    presentationType: "Invited Speaker",
+  },
+  {
+    type: "Conference",
+    year: 2024,
+    title: "12th Singapore International Chemistry Conference",
+    venue: "Singapore",
+    authors: "S. A. A. Abedi",
+    doi: "https://sicc12.org/",
+    summary: "Participated at the 12th Singapore International Chemistry Conference.",
+    presentationType: "Participated",
+  },
+  {
+    type: "Conference",
+    year: 2024,
+    title: "Catalysis Fundamentals and Practice Summer School",
+    venue: "Liverpool, UK",
+    authors: "S. A. A. Abedi",
+    doi: "https://www.rsc.org/events/detail/34830/catalysis-fundamentals-and-practice",
+    summary: "Presented a poster at the Catalysis Fundamentals and Practice Summer School in Liverpool, UK.",
+    presentationType: "Poster",
+  },
+  {
+    type: "Conference",
+    year: 2024,
+    title: "The 5th International Conference on Fluorescent Biomolecules",
+    venue: "Hong Kong",
+    authors: "S. A. A. Abedi",
+    doi: "https://www.polyu.edu.hk/abct/news-and-events/events/2024/3/the-5th-international-conference-on-fluorescent-biomolecules-and-their-building-blocks/?sc_lang=en",
+    summary: "Oral speaker at The 5th International Conference on Fluorescent Biomolecules in Hong Kong.",
+    presentationType: "Oral Speaker",
+  },
+  {
+    type: "Conference",
+    year: 2024,
+    title: "Photoswitching Mechanism of Cyanine-based Dyes; Computational Study on Photostability",
+    venue: "30th Canadian Symposium on Theoretical and Computational Chemistry (CSTCC2024)",
+    authors: "M Izadyar, SAA Abedi, X Liu",
+    doi: "https://scholar.google.com/scholar?cluster=17331837197642838280&hl=en&oi=scholarr",
+    summary: "Computational study on photoswitching mechanisms and photostability of cyanine-based dyes.",
+    presentationType: "Poster",
+  },
+  {
+    type: "Conference",
+    year: 2023,
+    title: "The 12th Asian Photochemistry Conference",
+    venue: "Melbourne, Australia",
+    authors: "S. A. A. Abedi",
+    doi: "https://www.rsc.org/events/detail/77699/12th-asian-photochemistry-conference",
+    summary: "Presented a poster at The 12th Asian Photochemistry Conference in Melbourne, Australia.",
+    presentationType: "Poster",
+  },
+  {
+    type: "Conference",
+    year: 2023,
+    title: "7th Green and Sustainable Chemistry Conference",
+    venue: "Dresden, Germany",
+    authors: "S. A. A. Abedi",
+    doi: "https://www.elsevier.com/events/conferences/all/green-and-sustainable-chemistry-conference",
+    summary: "Presented a poster at the 7th Green and Sustainable Chemistry Conference in Dresden, Germany.",
+    presentationType: "Poster",
+  },
+  {
+    type: "Conference",
+    year: 2023,
+    title: "Global Young Scientists Summit",
+    venue: "SUTD, Singapore",
+    authors: "S. A. A. Abedi",
+    doi: "https://gyss.nrf.gov.sg/highlights/gyss2023a/",
+    summary: "Participated at the Global Young Scientists Summit 2023 in Singapore.",
+    presentationType: "Participated",
+  },
+  {
+    type: "Preprint",
+    year: 2024,
+    title: "Solvent-Controlled GSIPT and TICT in a Schiff Base",
+    venue: "SSRN",
+    authors: "SAA Abedi, P Yadav, X Liu",
+    doi: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4563845",
+    summary: "Investigation of solvent-controlled excited-state intramolecular proton transfer (ESIPT) and twisted intramolecular charge transfer (TICT) mechanisms in a Schiff base system.",
+  },
+  {
+    type: "Thesis",
+    year: 2024,
+    title: "Predator-Prey Model with Age Structures",
+    venue: "PhD Thesis - Singapore University of Technology and Design (SUTD)",
+    authors: "Syed Ali Abbas Abedi",
+    doi: "https://drive.google.com/file/d/1zfhP2b7VcZHInWiFsKtOuTnUw0lD240W/view?usp=sharing",
+    summary: "Computational Design and Mechanistic Investigation of Fluorophores Based on Excited State Conformational Dynamics.",
+  },
+  {
+    type: "Journal",
+    year: 2023,
+    title: "Janus‐type ESIPT chromophores with distinctive intramolecular hydrogen‐bonding selectivity",
+    venue: "Angewandte Chemie International Edition",
+    authors: "Y Chen, S Lu, SA Abbas Abedi, M Jeong, H Li, M Hwa Kim, S Park, X Liu, ...",
+    doi: "https://onlinelibrary.wiley.com/doi/10.1002/anie.202311543",
+    summary: "Janus-type ESIPT chromophores with distinctive intramolecular hydrogen-bonding selectivity.",
+    citations: 35,
+  },
+  {
+    type: "Journal",
+    year: 2023,
+    title: "Blending Low‐Frequency Vibrations and Push–Pull Effects Affords Superior Photoacoustic Imaging Agents",
+    venue: "Angewandte Chemie International Edition",
+    authors: "L Yu, SA Abbas Abedi, J Lee, Y Xu, S Son, W Chi, M Li, X Liu, JH Park, ...",
+    doi: "https://onlinelibrary.wiley.com/doi/10.1002/anie.202307797",
+    summary: "Superior photoacoustic imaging agents through blending low-frequency vibrations and push-pull effects.",
+    citations: 25,
+  },
+  {
+    type: "Conference",
+    year: 2022,
+    title: "3rd Commonwealth Chemistry Posters Event",
+    venue: "Online",
+    authors: "S. A. A. Abedi",
+    doi: "https://commonwealthchemistry.org/event/3rd-commonwealth-chemistry-posters/",
+    summary: "Presented a poster at the 3rd Commonwealth Chemistry Posters Event (Online).",
+    presentationType: "Poster",
+  },
+  {
+    type: "Conference",
+    year: 2022,
+    title: "7th International Symposium of Quantum Beam Science",
+    venue: "Ibaraki University, Japan",
+    authors: "S. A. A. Abedi",
+    doi: "https://events.admb.ibaraki.ac.jp/uploads/event/001/BYLxru3xNs_3_2.pdf",
+    summary: "Oral speaker at the 7th International Symposium of Quantum Beam Science at Ibaraki University, Japan.",
+    presentationType: "Oral Speaker",
+  },
+  {
+    type: "Conference",
+    year: 2022,
+    title: "Quantum Computing Applications in Chemical and Biochemical Engineering Workshop",
+    venue: "Copenhagen, Denmark",
+    authors: "S. A. A. Abedi",
+    doi: "https://www.aiche.org/sbe/conferences/quantum-computing-applications-chemical-and-biochemical-engineering-workshop/2022",
+    summary: "Oral speaker at the Quantum Computing Applications in Chemical and Biochemical Engineering Workshop in Copenhagen, Denmark.",
+    presentationType: "Oral Speaker",
+  },
+  {
+    type: "Journal",
+    year: 2022,
+    title: "A PET-based fluorescent probe for monitoring labile Fe (II) pools in macrophage activations and ferroptosis",
+    venue: "Chemical Communications",
+    authors: "W Xing, H Xu, H Ma, SAA Abedi, S Wang, X Zhang, X Liu, H Xu, W Wang, ...",
+    doi: "https://pubs.rsc.org/en/content/articlelanding/2022/cc/d1cc06611k/unauth",
+    summary: "PET-based fluorescent probe for monitoring labile Fe(II) pools in macrophage activations and ferroptosis.",
+    citations: 27,
+  },
+  {
+    type: "Journal",
+    year: 2022,
+    title: "Rational design and application of an indolium-derived heptamethine cyanine with record-long second near-infrared emission",
+    venue: "CCS Chemistry",
+    authors: "X Ma, Y Huang, SAA Abedi, H Kim, TTB Davin, X Liu, WC Yang, Y Sun, ...",
+    doi: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.021.202101630",
+    summary: "Rational design of indolium-derived heptamethine cyanine with record-long second near-infrared emission.",
+    citations: 85,
+  },
+  {
+    type: "Journal",
+    year: 2021,
+    title: "Restriction of Twisted Intramolecular Charge Transfer Enables the Aggregation-Induced Emission of 1-(N,N-Dialkylamino)-naphthalene Derivatives",
+    venue: "The Journal of Physical Chemistry A",
+    authors: "SAA Abedi, W Chi, D Tan, T Shen, C Wang, ECX Ang, CH Tan, F Anariba, ...",
+    doi: "https://pubs.acs.org/doi/abs/10.1021/acs.jpca.1c06263",
+    summary: "Restriction of twisted intramolecular charge transfer enabling aggregation-induced emission in naphthalene derivatives.",
+    citations: 26,
+  },
+  {
+    type: "Journal",
+    year: 2021,
+    title: "Fluorescence umpolung enables light-up sensing of N-acetyltransferases and nerve agents",
+    venue: "Nature Communications",
+    authors: "C Yan, Z Guo, W Chi, W Fu, SAA Abedi, X Liu, H Tian, WH Zhu",
+    doi: "https://www.nature.com/articles/s41467-021-24187-5",
+    summary: "Fluorescence umpolung mechanism enabling light-up sensing of N-acetyltransferases and nerve agents.",
+    citations: 102,
+  },
+];
+
+// NOTE: Update with actual resources if available
+const resourceCards = [
+  // Add your actual resources here (datasets, slides, code, etc.)
+  // Example format:
+  // {
+  //   title: "Resource name",
+  //   description: "Description of the resource",
+  //   icon: "fa-database", // or "fa-code", "fa-person-chalkboard", etc.
+  //   link: "https://actual-link.com", // or "#" if not available
+  // },
+];
+
+let currentFilter = "Journal";
+let currentSort = "year"; // "year" or "citations"
+
+function renderMetrics() {
+  const citationEl = document.getElementById("metricCitations");
+  const hIndexEl = document.getElementById("metricHIndex");
+  if (citationEl) citationEl.textContent = publicationMetrics.citations;
+  if (hIndexEl) hIndexEl.textContent = publicationMetrics.hIndex;
+}
+
+function renderFilters() {
+  const filterContainer = document.getElementById("pubFilters");
+  if (!filterContainer) return;
+
+  filterContainer.innerHTML = publicationFilters
+    .map(
+      (filter) => `
+        <button
+          class="filter-pill ${filter === currentFilter ? "active" : ""}"
+          data-filter="${filter}"
+        >
+          ${filter}
+        </button>`
+    )
+    .join("");
+
+  filterContainer.querySelectorAll("button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      currentFilter = btn.dataset.filter;
+      renderFilters();
+      renderPublications();
+    });
+  });
+}
+
+function renderSortOptions() {
+  const sortContainer = document.getElementById("pubSort");
+  if (!sortContainer) return;
+
+  sortContainer.innerHTML = `
+    <div class="d-flex align-items-center gap-2">
+      <span class="text-muted small">Sort by:</span>
+      <select class="form-select form-select-sm" id="sortSelect" style="width: auto;">
+        <option value="year" ${currentSort === "year" ? "selected" : ""}>Year (Newest First)</option>
+        <option value="year-asc" ${currentSort === "year-asc" ? "selected" : ""}>Year (Oldest First)</option>
+        <option value="citations" ${currentSort === "citations" ? "selected" : ""}>Citations (Highest First)</option>
+        <option value="citations-asc" ${currentSort === "citations-asc" ? "selected" : ""}>Citations (Lowest First)</option>
+      </select>
+    </div>
+  `;
+
+  const sortSelect = document.getElementById("sortSelect");
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      currentSort = e.target.value;
+      renderPublications();
+    });
+  }
+}
+
+function renderPublications() {
+  const listEl = document.getElementById("publicationList");
+  if (!listEl) return;
+
+  let filtered = publications.filter(
+    (pub) => pub.type === currentFilter
+  );
+
+  // Sort the filtered results
+  filtered.sort((a, b) => {
+    if (currentSort === "year" || currentSort === "year-asc") {
+      // Sort by year
+      if (currentSort === "year") {
+        return b.year - a.year; // Newest first
+      } else {
+        return a.year - b.year; // Oldest first
+      }
+    } else if (currentSort === "citations" || currentSort === "citations-asc") {
+      // Sort by citations
+      const aCitations = a.citations || 0;
+      const bCitations = b.citations || 0;
+      if (currentSort === "citations") {
+        return bCitations - aCitations; // Highest first
+      } else {
+        return aCitations - bCitations; // Lowest first
+      }
+    }
+    return 0;
+  });
+
+  if (filtered.length === 0) {
+    listEl.innerHTML = `
+      <div class="text-center py-5">
+        <i class="fa-solid fa-file-lines fa-3x text-muted mb-3"></i>
+        <h3 class="h5 fw-semibold mb-2">Publications will appear here</h3>
+        <p class="text-muted mb-4">
+          Please update <code>assets/js/publications.js</code> with your actual publications from 
+          <a href="https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en" target="_blank" rel="noopener" class="text-decoration-none">
+            Google Scholar <i class="fa-solid fa-arrow-up-right-from-square ms-1"></i>
+          </a>
+        </p>
+        <a href="https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en" 
+           target="_blank" 
+           rel="noopener" 
+           class="btn btn-primary">
+          <i class="fa-brands fa-google-scholar me-2"></i>View Google Scholar Profile
+        </a>
+      </div>`;
+    return;
+  }
+
+  listEl.innerHTML = filtered
+    .map(
+      (pub, index) => `
+      <article class="publication-card-modern">
+        <div class="publication-header">
+          <div class="publication-number-modern">${index + 1}</div>
+          <div class="publication-meta">
+            <div class="publication-badges">
+              <span class="badge-modern badge-type">${pub.type}</span>
+              <span class="badge-modern badge-year">${pub.year}</span>
+              ${pub.presentationType ? `<span class="badge-modern badge-presentation">${pub.presentationType}</span>` : ''}
+              ${pub.citations ? `<span class="badge-modern badge-citations"><i class="fa-solid fa-quote-left me-1"></i>${pub.citations}</span>` : ''}
+            </div>
+          </div>
+        </div>
+        <div class="publication-content">
+          <h3 class="publication-title">${pub.title}</h3>
+          <p class="publication-authors">${pub.authors}</p>
+          <p class="publication-venue">${pub.venue}</p>
+          <p class="publication-summary">${pub.summary}</p>
+        </div>
+        <div class="publication-footer">
+          ${
+            pub.doi
+              ? `<a class="publication-link" href="${pub.doi}" target="_blank" rel="noopener">
+                  ${pub.type === "Conference" ? "View Details" : "View Publication"}
+                  <i class="fa-solid fa-arrow-up-right-from-square ms-2"></i>
+                </a>`
+              : pub.type === "Conference" 
+                ? `<span class="publication-no-link"><i class="fa-solid fa-calendar-check me-2"></i>Conference participation</span>`
+                : `<span class="publication-no-link">Slides available on request</span>`
+          }
+        </div>
+      </article>`
+    )
+    .join("");
+}
+
+function renderResources() {
+  const container = document.getElementById("resourceCards");
+  if (!container) return;
+
+  if (resourceCards.length === 0) {
+    container.innerHTML = `
+      <div class="col-12 text-center py-4">
+        <p class="text-muted">Resources will appear here when available.</p>
+      </div>`;
+    return;
+  }
+
+  container.innerHTML = resourceCards
+    .map(
+      (card) => `
+      <div class="col-md-4">
+        <div class="resource-card h-100">
+          <div class="icon-circle bg-primary-subtle text-primary mb-3">
+            <i class="fa-solid ${card.icon}"></i>
+          </div>
+          <h3 class="h5 fw-semibold">${card.title}</h3>
+          <p class="text-muted">${card.description}</p>
+          <a class="text-decoration-none fw-semibold" href="${card.link}" ${card.link === "#" ? 'onclick="return false;"' : 'target="_blank" rel="noopener"'}>
+            Open resource
+          </a>
+        </div>
+      </div>`
+    )
+    .join("");
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderMetrics();
+  renderFilters();
+  renderSortOptions();
+  renderPublications();
+  renderResources();
+});
+
