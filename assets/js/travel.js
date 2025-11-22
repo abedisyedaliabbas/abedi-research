@@ -221,10 +221,9 @@ function renderTravelPosts() {
   const container = document.getElementById("travelPosts");
   if (!container) return;
 
-  // Get top cities by places
+  // Get all cities sorted by places (descending)
   const topCities = [...cities]
-    .sort((a, b) => b.places - a.places)
-    .slice(0, 12);
+    .sort((a, b) => b.places - a.places);
 
   container.innerHTML = topCities
     .map(
