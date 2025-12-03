@@ -1,5 +1,5 @@
 // Travel data based on Google Timeline
-// Statistics: 81 cities visited, 19 countries/regions visited
+// Statistics: 88 cities visited since 2023, 19 countries/regions visited
 
 // Countries with city counts
 const countries = [
