@@ -85,110 +85,141 @@
     </header>
 
     <main class="bg-light" id="home">
-      <section class="hero container py-5">
-        <div class="row align-items-center g-4">
-          <div class="col-lg-6">
-            <span class="badge rounded-pill text-bg-primary text-uppercase"
-              >AI for Science · Computational Chemist</span
-            >
-            <h1 class="display-4 fw-bold mt-3">
-              AI-powered molecular design with quantum precision.
-            </h1>
-            <p class="lead text-muted">
-              Bridging artificial intelligence and computational chemistry to accelerate discovery of photostable materials and molecular systems.
-            </p>
-            <div class="d-flex gap-3 flex-wrap">
-              <a class="btn btn-primary btn-lg" href="#research">
-                Explore Research
-              </a>
+      <section class="hero-section container py-5">
+        <div class="row align-items-start g-5">
+          <div class="col-lg-4 text-center text-lg-start">
+            <div class="profile-photo-wrapper mb-4">
+              <img 
+                src="assets/img/main/profile-photo.jpg" 
+                alt="Syed Ali Abbas Abedi" 
+                class="profile-photo img-fluid rounded-circle"
+                loading="eager"
+              />
+            </div>
+            <div class="profile-info">
+              <h1 class="h2 fw-bold mb-2">Syed Ali Abbas Abedi</h1>
+              <p class="text-muted mb-3" id="heroPosition">Postdoctoral Research Fellow</p>
+              <p class="text-muted small mb-4" id="heroOrg">Singapore University of Technology and Design</p>
+              
+              <!-- Quick Stats -->
+              <div class="quick-stats mb-4">
+                <div class="row g-3 text-center">
+                  <div class="col-4">
+                    <div class="stat-number text-primary fw-bold" id="heroCitations">400+</div>
+                    <div class="stat-label text-muted small">Citations</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-number text-primary fw-bold" id="heroHIndex">10</div>
+                    <div class="stat-label text-muted small">h-index</div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stat-number text-primary fw-bold" id="heroPublications">20+</div>
+                    <div class="stat-label text-muted small">Papers</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social/Contact -->
+              <div class="profile-links">
+                <a href="publications.html" class="btn btn-outline-primary btn-sm mb-2 w-100">
+                  <i class="fa-solid fa-file-lines me-2"></i>View Publications
+                </a>
+                <a href="#contact" class="btn btn-outline-secondary btn-sm w-100">
+                  <i class="fa-solid fa-envelope me-2"></i>Get in Touch
+                </a>
+              </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="hero-right-content text-center">
-              <div class="hero-stats d-flex justify-content-center gap-4 flex-wrap mb-4">
-                <div class="stat-item">
-                  <div class="h3 fw-bold text-primary mb-1" id="heroCitations">379</div>
-                  <p class="text-muted small mb-0">Citations</p>
-                </div>
-                <div class="stat-item">
-                  <div class="h3 fw-bold text-primary mb-1" id="heroHIndex">9</div>
-                  <p class="text-muted small mb-0">h-index</p>
-                </div>
-                <div class="stat-item">
-                  <div class="h3 fw-bold text-primary mb-1" id="heroPublications">19</div>
-                  <a href="publications.html" class="text-muted small mb-0 text-decoration-none" style="cursor: pointer;">
-                    Publications
-                  </a>
-                </div>
+          
+          <div class="col-lg-8">
+            <div class="hero-content">
+              <h2 class="h3 fw-bold mb-3">About My Research</h2>
+              <div class="lead-text mb-4">
+                <p class="mb-3">
+                  I'm a computational chemist working at the intersection of artificial intelligence and molecular design. My research focuses on understanding and designing photostable organic materials using quantum chemical methods and machine learning approaches.
+                </p>
+                <p class="mb-3">
+                  Currently, I'm developing AI-guided fluorophores for biomedical imaging applications, particularly photoacoustic imaging and photothermal therapy. By combining quantum mechanical simulations (TD-DFT, CASSCF, CASPT2) with machine learning predictions, I aim to accelerate the discovery of next-generation molecular probes.
+                </p>
+                <p>
+                  Previously, I completed my PhD at SUTD investigating excited-state conformational dynamics of organic dyes. I've also spent time as a visiting researcher at UCL and Queen Mary University in London, collaborating on photostability mechanisms and nonadiabatic dynamics simulations.
+                </p>
               </div>
               
-              <!-- Current Position -->
-              <div class="hero-position mb-3">
-                <p class="text-muted small mb-1">
-                  <i class="fa-solid fa-briefcase me-2"></i>Current Position
-                </p>
-                <p class="fw-semibold mb-0" id="heroPosition">Postdoctoral Research Fellow</p>
-                <p class="text-muted small mb-0" id="heroOrg">SUTD, Singapore</p>
-              </div>
-              
-              <!-- Research Keywords -->
-              <div class="hero-keywords mb-3">
-                <p class="text-muted small mb-2">
-                  <i class="fa-solid fa-tags me-2"></i>Research Methods
-                </p>
-                <div class="d-flex flex-wrap gap-2 justify-content-center" id="heroKeywords">
-                  <span class="badge rounded-pill text-bg-primary-subtle border border-primary">AI/ML</span>
-                  <span class="badge rounded-pill text-bg-primary-subtle border border-primary">TD-DFT</span>
-                  <span class="badge rounded-pill text-bg-primary-subtle border border-primary">CASSCF</span>
-                  <span class="badge rounded-pill text-bg-primary-subtle border border-primary">CASPT2</span>
+              <!-- Research Interests -->
+              <div class="research-interests mb-4">
+                <h3 class="h5 fw-semibold mb-3">Research Interests</h3>
+                <div class="d-flex flex-wrap gap-2" id="heroKeywords">
+                  <span class="badge rounded-pill bg-light text-dark border">Computational Chemistry</span>
+                  <span class="badge rounded-pill bg-light text-dark border">Machine Learning</span>
+                  <span class="badge rounded-pill bg-light text-dark border">Photostability</span>
+                  <span class="badge rounded-pill bg-light text-dark border">Excited-State Dynamics</span>
+                  <span class="badge rounded-pill bg-light text-dark border">Molecular Design</span>
+                  <span class="badge rounded-pill bg-light text-dark border">Bioimaging</span>
+                  <span class="badge rounded-pill bg-light text-dark border">TD-DFT</span>
+                  <span class="badge rounded-pill bg-light text-dark border">CASSCF/CASPT2</span>
                 </div>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="quick-links">
+                <a href="#research" class="text-decoration-none me-4">
+                  <i class="fa-solid fa-flask text-primary me-2"></i>Research
+                </a>
+                <a href="#education" class="text-decoration-none me-4">
+                  <i class="fa-solid fa-graduation-cap text-primary me-2"></i>Education
+                </a>
+                <a href="travel.html" class="text-decoration-none">
+                  <i class="fa-solid fa-globe text-primary me-2"></i>Travel Blog
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="research" class="py-5">
+      <section id="research" class="py-5 bg-white">
         <div class="container">
           <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Research Pillars</span>
-            <h2 class="fw-bold">Where AI meets molecular design</h2>
+            <span class="eyebrow">Research</span>
+            <h2 class="fw-bold">Research Areas</h2>
+            <p class="text-muted">My work spans computational methods and AI-driven molecular design</p>
           </div>
           <div class="row g-4" id="researchCards"></div>
         </div>
       </section>
 
-      <section id="education" class="py-5 bg-white">
+      <section id="education" class="py-5">
         <div class="container">
           <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Education</span>
-            <h2 class="fw-bold">Cross-disciplinary training</h2>
+            <span class="eyebrow">Background</span>
+            <h2 class="fw-bold">Education & Training</h2>
             <p class="text-muted">
-              Degrees across engineering, chemistry, and applied mathematics to
-              build molecular intuition backed by computation.
+              My academic journey across engineering, chemistry, and applied mathematics
             </p>
           </div>
           <div class="timeline" id="educationTimeline"></div>
         </div>
       </section>
 
-      <section id="experience" class="py-5">
+      <section id="experience" class="py-5 bg-white">
         <div class="container">
           <div class="section-heading text-center mb-5">
             <span class="eyebrow">Experience</span>
-            <h2 class="fw-bold">Global collaborations and fellowships</h2>
+            <h2 class="fw-bold">Research Positions & Collaborations</h2>
+            <p class="text-muted">My research journey across different institutions</p>
           </div>
           <div class="row g-4" id="experienceCards"></div>
         </div>
       </section>
 
-      <section id="partners" class="py-5 bg-white">
+      <section id="partners" class="py-5">
         <div class="container">
           <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Affiliations</span>
-            <h2 class="fw-bold">Institutions that shaped the journey</h2>
+            <span class="eyebrow">Collaborations</span>
+            <h2 class="fw-bold">Institutions & Partners</h2>
             <p class="text-muted">
-              Universities and institutions I've collaborated with.
+              Universities and institutions where I've studied and worked
             </p>
           </div>
           <div

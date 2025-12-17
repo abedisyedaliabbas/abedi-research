@@ -28,29 +28,158 @@ body {
   }
 }
 
-/* Hero Section Animations */
-.hero {
+/* Hero Section - Portfolio Style */
+.hero-section {
   animation: fadeIn 0.6s ease-out;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
 }
 
-.hero h1 {
-  animation: fadeInUp 0.8s ease-out;
+.profile-photo-wrapper {
+  position: relative;
+  display: inline-block;
 }
 
-.hero .lead {
-  animation: fadeInUp 0.8s ease-out 0.2s;
-  animation-fill-mode: both;
-}
-
-.hero .btn {
-  animation: fadeInUp 0.8s ease-out 0.4s;
-  animation-fill-mode: both;
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 4px solid var(--brand-primary);
+  box-shadow: 0 8px 24px rgba(31, 98, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero .btn:hover {
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 32px rgba(31, 98, 255, 0.3);
+}
+
+.profile-info h1 {
+  color: var(--brand-dark);
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.quick-stats {
+  padding: 1rem;
+  background: rgba(31, 98, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(31, 98, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 0.25rem;
+}
+
+.profile-links .btn {
+  transition: all 0.3s ease;
+}
+
+.profile-links .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(31, 98, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(31, 98, 255, 0.3);
+}
+
+.hero-content {
+  padding-left: 1rem;
+}
+
+.hero-content h2 {
+  color: var(--brand-dark);
+  border-bottom: 2px solid var(--brand-primary);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.lead-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--brand-dark);
+  opacity: 0.9;
+}
+
+.lead-text p {
+  margin-bottom: 1rem;
+}
+
+.research-interests .badge {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.research-interests .badge:hover {
+  background-color: var(--brand-primary) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(31, 98, 255, 0.2);
+}
+
+.quick-links {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(31, 98, 255, 0.1);
+}
+
+.quick-links a {
+  color: var(--brand-dark);
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.quick-links a:hover {
+  color: var(--brand-primary);
+  transform: translateX(4px);
+}
+
+/* Dark theme for portfolio hero */
+body[data-theme="dark"] .quick-stats {
+  background: rgba(122, 166, 255, 0.05);
+  border-color: rgba(122, 166, 255, 0.2);
+}
+
+body[data-theme="dark"] .research-interests .badge {
+  background-color: rgba(122, 166, 255, 0.1) !important;
+  border-color: rgba(122, 166, 255, 0.3) !important;
+  color: var(--brand-dark) !important;
+}
+
+body[data-theme="dark"] .research-interests .badge:hover {
+  background-color: var(--brand-primary) !important;
+  color: white !important;
+}
+
+@media (max-width: 991px) {
+  .hero-content {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+  
+  .profile-photo {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .profile-photo-wrapper {
+    text-align: center;
+  }
+  
+  .profile-info {
+    text-align: center;
+  }
+  
+  .quick-stats {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
 
 body[data-theme="dark"] {
@@ -816,20 +945,34 @@ body[data-theme="dark"] .page-hero {
 
 .travel-stats-card {
   border-radius: var(--radius);
-  padding: 1.25rem;
+  padding: 1.5rem;
   background-color: var(--brand-surface);
   border: 1px solid rgba(31, 98, 255, 0.12);
   display: grid;
-  gap: 0.875rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
 .travel-stat {
-  padding: 0.5rem 0;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(31, 98, 255, 0.03), rgba(31, 98, 255, 0.08));
+  transition: all 0.3s ease;
+}
+
+.travel-stat:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(31, 98, 255, 0.06), rgba(31, 98, 255, 0.12));
+  box-shadow: 0 4px 12px rgba(31, 98, 255, 0.15);
 }
 
 .travel-stat h3 {
   color: var(--brand-primary);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
 .travel-stat p {
@@ -966,6 +1109,66 @@ body[data-theme="dark"] .page-hero {
   height: 260px;
   object-fit: cover;
   width: 100%;
+}
+
+/* Travel Blog Post Styles */
+.travel-blog-post {
+  padding: 2rem;
+  background-color: var(--brand-surface);
+  border-radius: var(--radius);
+  border: 1px solid rgba(31, 98, 255, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.travel-blog-post:hover {
+  box-shadow: 0 8px 24px rgba(31, 98, 255, 0.12);
+  border-color: rgba(31, 98, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.blog-post-cover {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post-cover img {
+  transition: transform 0.3s ease;
+}
+
+.travel-blog-post:hover .blog-post-cover img {
+  transform: scale(1.05);
+}
+
+.travel-blog-content {
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.travel-blog-content p {
+  text-align: justify;
+  color: var(--brand-dark);
+  opacity: 0.9;
+}
+
+.travel-blog-content p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .travel-blog-post {
+    padding: 1.5rem;
+  }
+  
+  .blog-post-cover img {
+    height: 250px !important;
+  }
+  
+  .travel-blog-content {
+    font-size: 1rem;
+  }
 }
 
 .metric-card {
@@ -1241,6 +1444,17 @@ body[data-theme="dark"] footer {
 }
 
 /* Mobile devices */
+@media (max-width: 768px) {
+  .travel-stats-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .travel-stat h3 {
+    font-size: 2rem;
+  }
+}
+
 @media (max-width: 575px) {
   /* Typography */
   .display-5 {
@@ -1263,6 +1477,11 @@ body[data-theme="dark"] footer {
   .post-cover {
     height: 200px;
     min-height: 200px;
+  }
+  
+  /* Travel stats on mobile */
+  .travel-stat h3 {
+    font-size: 1.75rem;
   }
   
   /* Timeline */

@@ -1,7 +1,7 @@
 // Metrics from Google Scholar: https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en
 const publicationMetrics = {
-  citations: 379,
-  hIndex: 9,
+  citations: "400+",
+  hIndex: 10,
 };
 
 const publicationFilters = ["Journal", "Conference", "Preprint", "Thesis"];
@@ -17,6 +17,15 @@ const publications = [
     doi: "https://gyss.nrf.gov.sg/highlights/gyss2025/",
     summary: "Participated at the Global Young Scientists Summit 2025 in Singapore.",
     presentationType: "Participated",
+  },
+  {
+    type: "Journal",
+    year: 2025,
+    title: "Red and Robust: Highly Stable Electrofluorochromic Switching in Cyano-Substituted Aggregation-Induced Emission-Active Conjugated Polymers",
+    venue: "Advanced Optical Materials",
+    authors: "BYK Hui, R Tao, KLO Chin, XYD Soo, A Sng, SAA Abedi, KC Chong, X Liu, J Xu, MH Chua",
+    doi: "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adom.202502075",
+    summary: "Highly stable electrofluorochromic switching in cyano-substituted aggregation-induced emission-active conjugated polymers with robust performance.",
   },
   {
     type: "Journal",
