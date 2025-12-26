@@ -265,6 +265,133 @@ function renderPartnerLogos() {
     .join("");
 }
 
+// GitHub username - update this if your GitHub username is different
+const GITHUB_USERNAME = "abedisyedaliabbas";
+
+// Fetch and render GitHub repositories
+async function renderGitHubRepos() {
+  const container = document.getElementById("githubRepos");
+  if (!container) return;
+
+  try {
+    // Fetch repositories from GitHub API
+    const response = await fetch(
+      `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&direction=desc&per_page=6`
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch GitHub repositories");
+    }
+
+    const repos = await response.json();
+
+    if (repos.length === 0) {
+      container.innerHTML = `
+        <div class="col-12 text-center py-5">
+          <i class="fa-brands fa-github fa-3x text-muted mb-3"></i>
+          <p class="text-muted">No public repositories found.</p>
+          <a href="https://github.com/${GITHUB_USERNAME}" target="_blank" rel="noopener" class="btn btn-outline-primary">
+            View GitHub Profile
+          </a>
+        </div>
+      `;
+      return;
+    }
+
+    // Render repository cards
+    container.innerHTML = repos
+      .map((repo) => {
+        // Format date
+        const updatedDate = new Date(repo.updated_at);
+        const formattedDate = updatedDate.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "short",
+        });
+
+        // Get language color (default to gray)
+        const language = repo.language || "Other";
+        const languageColors = {
+          JavaScript: "#f1e05a",
+          Python: "#3572A5",
+          Java: "#b07219",
+          TypeScript: "#2b7489",
+          "C++": "#f34b7d",
+          "C#": "#239120",
+          HTML: "#e34c26",
+          CSS: "#563d7c",
+          Shell: "#89e051",
+          R: "#198CE7",
+          Other: "#6c757d",
+        };
+
+        return `
+        <div class="col-md-6 col-lg-4">
+          <div class="card-gradient p-4 h-100 d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h3 class="h5 fw-semibold mb-0">
+                <a href="${repo.html_url}" target="_blank" rel="noopener" class="text-decoration-none">
+                  <i class="fa-brands fa-github me-2 text-primary"></i>${repo.name}
+                </a>
+              </h3>
+            </div>
+            <p class="text-muted small mb-3 flex-grow-1">${
+              repo.description || "No description available"
+            }</p>
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-2">
+              ${repo.language ? `
+                <span class="d-flex align-items-center">
+                  <span class="badge rounded-pill" style="background-color: ${languageColors[language] || languageColors.Other}; color: white; padding: 2px 8px;">
+                    ${language}
+                  </span>
+                </span>
+              ` : ""}
+              ${repo.stargazers_count > 0 ? `
+                <span class="text-muted small">
+                  <i class="fa-solid fa-star text-warning"></i> ${repo.stargazers_count}
+                </span>
+              ` : ""}
+              ${repo.forks_count > 0 ? `
+                <span class="text-muted small">
+                  <i class="fa-solid fa-code-branch"></i> ${repo.forks_count}
+                </span>
+              ` : ""}
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-auto pt-2 border-top">
+              <small class="text-muted">Updated ${formattedDate}</small>
+              <a href="${repo.html_url}" target="_blank" rel="noopener" class="btn btn-sm btn-outline-primary">
+                View <i class="fa-solid fa-external-link ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+      })
+      .join("");
+
+    // Add "View All" button if there are more repos
+    if (repos.length >= 6) {
+      container.innerHTML += `
+        <div class="col-12 text-center mt-4">
+          <a href="https://github.com/${GITHUB_USERNAME}?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline-primary">
+            <i class="fa-brands fa-github me-2"></i>View All Repositories
+          </a>
+        </div>
+      `;
+    }
+  } catch (error) {
+    console.error("Error fetching GitHub repos:", error);
+    container.innerHTML = `
+      <div class="col-12 text-center py-5">
+        <i class="fa-solid fa-exclamation-triangle fa-2x text-warning mb-3"></i>
+        <p class="text-muted">Unable to load GitHub repositories at this time.</p>
+        <a href="https://github.com/${GITHUB_USERNAME}" target="_blank" rel="noopener" class="btn btn-outline-primary">
+          View GitHub Profile
+        </a>
+      </div>
+    `;
+  }
+}
+
 // News carousel removed from main page - now on separate news.html page
 
 // Intro video button removed
@@ -387,6 +514,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderTimeline();
   renderExperience();
   renderPartnerLogos();
+  renderGitHubRepos();
   initContactForm();
 });
 
