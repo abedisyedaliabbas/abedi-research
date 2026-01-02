@@ -106,6 +106,15 @@ const publications = [
   },
   {
     type: "Journal",
+    year: 2025,
+    title: "Barrierless conical intersection as a photophysical design principle for photoacoustic and photothermal contrast agents",
+    venue: "Chinese Chemical Letters",
+    authors: "Z Wu, SAA Abedi, R Huang, L Lin, X Liu",
+    doi: "https://www.sciencedirect.com/science/article/abs/pii/S1001841725014925",
+    summary: "Exploration of barrierless conical intersections as a photophysical design principle for developing photoacoustic and photothermal contrast agents.",
+  },
+  {
+    type: "Journal",
     year: 2024,
     title: "Aryl‐Modified Pentamethyl Cyanine Dyes at the C2'Position: A Tunable Platform for Activatable Photosensitizers",
     venue: "Advanced Science",
