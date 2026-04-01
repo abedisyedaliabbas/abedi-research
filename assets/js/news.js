@@ -1,6 +1,18 @@
 // News articles from the website: https://www.syedaliabbasabedi.com/?page_id=48
 const newsArticles = [
   {
+    title: "Presented at the 6th International Conference on Fluorescent Biomolecules and their Building Blocks (FB3) in Torino",
+    date: "March 2026",
+    tag: "Conference",
+    photo: "assets/img/news/fb3-torino-2026.jpg",
+    photoType: "portrait",
+    content: `I had an amazing time at the 6th International Conference on Fluorescent Biomolecules and their Building Blocks (FB3), where I presented my work and connected with researchers from across the community.
+
+A huge thank you to Andrea Fin, Francesca Cardano, Federica Micheletto, and the entire organizing team at the Department of Chemistry, University of Turin, for creating such a seamless and inspiring conference experience.
+
+Beyond the scientific sessions, Torino was an unforgettable host city. I am deeply grateful to my supervisor, Prof. Xiaogang Liu, and to Nanyang Technological University (NTU) and the Ministry of Education, Singapore (MOE), for their continued support and funding for this research trip to Italy.`,
+  },
+  {
     title: "Celebrating My PhD Graduation in Computational Chemistry!",
     date: "June 5, 2024",
     tag: "Milestone",
