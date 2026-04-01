@@ -1,6 +1,6 @@
 const profileData = {
-  currentRole: "Postdoctoral Research Fellow",
-  currentOrg: "Singapore University of Technology and Design (SUTD)",
+  currentRole: "Research Fellow",
+  currentOrg: "Nanyang Technological University (NTU)",
   focus: "AI-Driven Molecular Design & Photoacoustic Imaging",
   methods: "AI/ML · TD-DFT · CASSCF · CASPT2",
   vision: "AI-accelerated discovery of smarter, more sustainable materials",
@@ -56,10 +56,20 @@ const educationTimeline = [
 
 const experienceData = [
   {
+    role: "Research Fellow",
+    org: "Nanyang Technological University (NTU)",
+    location: "Singapore",
+    duration: "Jan 2026 – Present",
+    highlights: [
+      "Leading full-time research in computational chemistry and molecular design.",
+      "Advancing AI-guided fluorophore design for bioimaging and phototherapy applications.",
+    ],
+  },
+  {
     role: "Visiting Research Fellow",
     org: "Nanyang Technological University (NTU)",
     location: "Singapore",
-    duration: "Aug 2025 – Present",
+    duration: "Aug 2025 – Jan 2026",
     highlights: [
       "Research collaboration in computational chemistry and molecular design.",
     ],
@@ -68,7 +78,7 @@ const experienceData = [
     role: "Postdoctoral Research Fellow",
     org: "Singapore University of Technology and Design (SUTD)",
     location: "Singapore",
-    duration: "Sep 2024 – Present",
+    duration: "Sep 2024 – Jan 2026",
     highlights: [
       "Designing organic fluorophores for photoacoustic imaging and photothermal therapy.",
       "Merging quantum chemical modeling with real-world biomedical applications.",
