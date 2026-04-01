@@ -125,8 +125,8 @@ function renderNewsArticles() {
               </div>
             </div>
             ${hasPhoto && isPortraitPhoto ? `
-            <div class="flex-shrink-0" style="width: 150px;">
-              <img src="${article.photo}" alt="${article.title}" class="img-fluid rounded-3" style="width: 150px; height: 200px; object-fit: cover;" />
+            <div class="flex-shrink-0" style="width: 220px;">
+              <img src="${article.photo}" alt="${article.title}" class="img-fluid rounded-3" style="width: 100%; height: 280px; object-fit: contain; background-color: #f8f9fa;" />
             </div>
             ` : ''}
           </div>
