@@ -14,7 +14,7 @@ const publications = [
     title: "Mechanistic insights into the design of fluorogenic molecules for wash-free biological applications",
     venue: "Chemical Society Reviews",
     authors: "R Huang, SAA Abedi, G Jiang, C Wang, L Peng, T Shen, N Mroweh, ...",
-    doi: "",
+    doi: "https://pubs.rsc.org/ko/content/articlelanding/2026/cs/d5cs01519g",
     summary: "Mechanistic insights into the design of fluorogenic molecules for wash-free biological applications.",
   },
   {
