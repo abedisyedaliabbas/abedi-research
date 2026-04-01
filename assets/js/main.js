@@ -275,9 +275,9 @@ function renderHeroStats() {
   const hIndexEl = document.getElementById("heroHIndex");
   const publicationsEl = document.getElementById("heroPublications");
   
-  if (citationsEl) citationsEl.textContent = "400+";
-  if (hIndexEl) hIndexEl.textContent = "10";
-  if (publicationsEl) publicationsEl.textContent = "20+";
+  if (citationsEl) citationsEl.textContent = "484";
+  if (hIndexEl) hIndexEl.textContent = "11";
+  if (publicationsEl) publicationsEl.textContent = "25";
   
   // Update hero position
   const positionEl = document.getElementById("heroPosition");

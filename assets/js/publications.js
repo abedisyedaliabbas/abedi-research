@@ -1,13 +1,22 @@
 // Metrics from Google Scholar: https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en
 const publicationMetrics = {
-  citations: "400+",
-  hIndex: 10,
+  citations: "484",
+  hIndex: 11,
 };
 
 const publicationFilters = ["Journal", "Conference", "Preprint", "Thesis"];
 
 // Publications from Google Scholar: https://scholar.google.com/citations?user=bcqvfOUAAAAJ&hl=en
 const publications = [
+  {
+    type: "Journal",
+    year: 2026,
+    title: "Mechanistic insights into the design of fluorogenic molecules for wash-free biological applications",
+    venue: "Chemical Society Reviews",
+    authors: "R Huang, SAA Abedi, G Jiang, C Wang, L Peng, T Shen, N Mroweh, ...",
+    doi: "",
+    summary: "Mechanistic insights into the design of fluorogenic molecules for wash-free biological applications.",
+  },
   {
     type: "Conference",
     year: 2025,
@@ -20,7 +29,7 @@ const publications = [
   },
   {
     type: "Journal",
-    year: 2025,
+    year: 2026,
     title: "Red and Robust: Highly Stable Electrofluorochromic Switching in Cyano-Substituted Aggregation-Induced Emission-Active Conjugated Polymers",
     venue: "Advanced Optical Materials",
     authors: "BYK Hui, R Tao, KLO Chin, XYD Soo, A Sng, SAA Abedi, KC Chong, X Liu, J Xu, MH Chua",
@@ -35,7 +44,7 @@ const publications = [
     authors: "DH Kim, HM Triet, SH Lee, S Jazani, S Jang, SAA Abedi, X Liu, J Seo, ...",
     doi: "https://www.nature.com/articles/s41592-024-02584-0",
     summary: "Development of a super-photostable organic dye enabling long-term live-cell single-protein imaging.",
-    citations: 10,
+    citations: 21,
   },
   {
     type: "Journal",
@@ -45,7 +54,7 @@ const publications = [
     authors: "K An, Q Qiao, SAA Abedi, X Liu, Z Xu",
     doi: "https://www.sciencedirect.com/science/article/abs/pii/S100184172400305X",
     summary: "Investigation of spectral characteristics in fluorophores through cross-conjugation hybridization.",
-    citations: 6,
+    citations: 11,
   },
   {
     type: "Journal",
@@ -55,7 +64,7 @@ const publications = [
     authors: "D Sosnin, M Izadyar, SAA Abedi, X Liu, I Aprahamian",
     doi: "https://pubs.acs.org/doi/abs/10.1021/jacs.5c02183",
     summary: "Development of clicked hydrazone photoswitches for molecular switching applications.",
-    citations: 5,
+    citations: 10,
   },
   {
     type: "Journal",
@@ -65,7 +74,7 @@ const publications = [
     authors: "Q Qi, J Li, Q Qiao, C Yan, M Izadyar, C Wang, SAA Abedi, X Liu, Z Guo, ...",
     doi: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.025.202405383",
     summary: "High photostability oxazolidine-caged heptamethine cyanine switch for bioimaging applications.",
-    citations: 3,
+    citations: 6,
   },
   {
     type: "Journal",
@@ -75,7 +84,7 @@ const publications = [
     authors: "XY Oh, QV Thi, MML Yu, M Izadyar, SAA Abedi, X Liu, VX Truong",
     doi: "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202421823",
     summary: "Development of moisture-tolerant, thermally stable light-switchable adhesives using reversible photocycloaddition.",
-    citations: 2,
+    citations: 4,
   },
   {
     type: "Journal",
@@ -85,6 +94,7 @@ const publications = [
     authors: "D Sosnin, SAA Abedi, M Izadyar, Y Ünal, X Liu, I Aprahamian",
     doi: "https://onlinelibrary.wiley.com/doi/abs/10.1002/ange.202515136",
     summary: "Design and characterization of hetero-hydrazone photoswitches.",
+    citations: 5,
   },
   {
     type: "Journal",
@@ -94,6 +104,7 @@ const publications = [
     authors: "Q Hu, J Du, SAA Abedi, X Liu, S Long, W Sun, J Fan, X Peng",
     doi: "https://onlinelibrary.wiley.com/doi/abs/10.1002/ange.202504670",
     summary: "Dark state photocages enabling efficient triplet state generation under near-infrared light.",
+    citations: 8,
   },
   {
     type: "Journal",
@@ -103,6 +114,7 @@ const publications = [
     authors: "R Tao, BYK Hui, KLO Chin, XYD Soo, D Zhang, SAA Abedi, P Bi, X Liu, ...",
     doi: "https://pubs.rsc.org/en/content/articlehtml/2025/qm/d5qm00035a",
     summary: "Highly stable electrofluorochromic switching in aggregation-induced emission-active conjugated polymers.",
+    citations: 6,
   },
   {
     type: "Journal",
@@ -121,7 +133,7 @@ const publications = [
     authors: "F Han, SA Abbas Abedi, S He, H Zhang, S Long, X Zhou, ...",
     doi: "https://advanced.onlinelibrary.wiley.com/doi/full/10.1002/advs.202305761",
     summary: "Aryl-modified pentamethyl cyanine dyes as tunable platforms for activatable photosensitizers.",
-    citations: 26,
+    citations: 36,
   },
   {
     type: "Journal",
@@ -131,7 +143,7 @@ const publications = [
     authors: "QPN Nhu, SAA Abedi, S Chanmungkalakul, M Sukwattanasinitt, ...",
     doi: "https://www.sciencedirect.com/science/article/abs/pii/S0143720824002535",
     summary: "Solvatochromic fluorescent ethynyl naphthalimide derivatives for water detection in organic solvents.",
-    citations: 11,
+    citations: 17,
   },
   {
     type: "Journal",
@@ -141,7 +153,7 @@ const publications = [
     authors: "S Chanmungkalakul, SAA Abedi, FJ Hernandez, J Xu, X Liu",
     doi: "https://www.sciencedirect.com/science/article/abs/pii/S1001841723009786",
     summary: "Investigation of photophysics in singlet states of self-healing dyes containing cyclooctatetraene.",
-    citations: 9,
+    citations: 11,
   },
   {
     type: "Journal",
@@ -151,7 +163,7 @@ const publications = [
     authors: "S Huang, SAA Abedi, Z Li, R Huang, X Yan, M Izadyar, Q Qiao, Y Fang, ...",
     doi: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.024.202404541",
     summary: "Conformational folding mechanisms activating photoinduced electron transfer processes.",
-    citations: 7,
+    citations: 11,
   },
   {
     type: "Conference",
@@ -259,7 +271,16 @@ const publications = [
     authors: "Y Chen, S Lu, SA Abbas Abedi, M Jeong, H Li, M Hwa Kim, S Park, X Liu, ...",
     doi: "https://onlinelibrary.wiley.com/doi/10.1002/anie.202311543",
     summary: "Janus-type ESIPT chromophores with distinctive intramolecular hydrogen-bonding selectivity.",
-    citations: 35,
+    citations: 40,
+  },
+  {
+    type: "Journal",
+    year: 2023,
+    title: "The Highly Operational Team (HOT) toward f-Block Materials",
+    venue: "Angewandte Chemie International Edition",
+    authors: "KC Park, P Kittikhunnatham, J Lim, GC Thaggard, Y Liu, CR Martin, ...",
+    doi: "",
+    summary: "Collaborative article on the Highly Operational Team (HOT) framework toward f-block materials.",
   },
   {
     type: "Journal",
@@ -269,7 +290,7 @@ const publications = [
     authors: "L Yu, SA Abbas Abedi, J Lee, Y Xu, S Son, W Chi, M Li, X Liu, JH Park, ...",
     doi: "https://onlinelibrary.wiley.com/doi/10.1002/anie.202307797",
     summary: "Superior photoacoustic imaging agents through blending low-frequency vibrations and push-pull effects.",
-    citations: 25,
+    citations: 31,
   },
   {
     type: "Conference",
@@ -309,7 +330,7 @@ const publications = [
     authors: "W Xing, H Xu, H Ma, SAA Abedi, S Wang, X Zhang, X Liu, H Xu, W Wang, ...",
     doi: "https://pubs.rsc.org/en/content/articlelanding/2022/cc/d1cc06611k/unauth",
     summary: "PET-based fluorescent probe for monitoring labile Fe(II) pools in macrophage activations and ferroptosis.",
-    citations: 27,
+    citations: 31,
   },
   {
     type: "Journal",
@@ -319,7 +340,7 @@ const publications = [
     authors: "X Ma, Y Huang, SAA Abedi, H Kim, TTB Davin, X Liu, WC Yang, Y Sun, ...",
     doi: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.021.202101630",
     summary: "Rational design of indolium-derived heptamethine cyanine with record-long second near-infrared emission.",
-    citations: 85,
+    citations: 94,
   },
   {
     type: "Journal",
@@ -329,7 +350,7 @@ const publications = [
     authors: "SAA Abedi, W Chi, D Tan, T Shen, C Wang, ECX Ang, CH Tan, F Anariba, ...",
     doi: "https://pubs.acs.org/doi/abs/10.1021/acs.jpca.1c06263",
     summary: "Restriction of twisted intramolecular charge transfer enabling aggregation-induced emission in naphthalene derivatives.",
-    citations: 26,
+    citations: 25,
   },
   {
     type: "Journal",
@@ -339,7 +360,7 @@ const publications = [
     authors: "C Yan, Z Guo, W Chi, W Fu, SAA Abedi, X Liu, H Tian, WH Zhu",
     doi: "https://www.nature.com/articles/s41467-021-24187-5",
     summary: "Fluorescence umpolung mechanism enabling light-up sensing of N-acetyltransferases and nerve agents.",
-    citations: 102,
+    citations: 117,
   },
 ];
 
