@@ -7,7 +7,7 @@ const countries = [
   { name: "Singapore", cities: 1, timeAgo: "Last week", flag: "🇸🇬" },
   { name: "Malaysia", cities: 8, timeAgo: "3 weeks ago", flag: "🇲🇾" },
   { name: "Thailand", cities: 14, timeAgo: "6 months ago", flag: "🇹🇭" },
-  { name: "Italy", cities: 9, timeAgo: "11 months ago", flag: "🇮🇹" },
+  { name: "Italy", cities: 10, timeAgo: "2 weeks ago", flag: "🇮🇹" },
   { name: "Netherlands", cities: 2, timeAgo: "11 months ago", flag: "🇳🇱" },
   { name: "France", cities: 3, timeAgo: "11 months ago", flag: "🇫🇷" },
   { name: "Bahrain", cities: 1, timeAgo: "11 months ago", flag: "🇧🇭" },
@@ -61,6 +61,7 @@ const cities = [
   { name: "Khlong Chik", country: "Thailand", places: 1, timeAgo: "8 months ago", cover: "assets/img/travel/bangkok.jpg" },
   
   // Italy
+  { name: "Torino", country: "Italy", places: 8, timeAgo: "2 weeks ago", cover: "assets/img/travel/Torino.jpg" },
   { name: "Milan", country: "Italy", places: 13, timeAgo: "11 months ago", cover: "assets/img/travel/milan.jpg" },
   { name: "Venice", country: "Italy", places: 7, timeAgo: "2 years ago", cover: "assets/img/travel/venice.jpg" },
   { name: "Padua", country: "Italy", places: 1, timeAgo: "2 years ago", cover: "assets/img/travel/venice.jpg" },
@@ -149,6 +150,17 @@ const cities = [
 
 // Travel blog posts with full narratives
 const travelBlogPosts = [
+  {
+    city: "Torino",
+    date: "March 2026",
+    country: "Italy",
+    cover: "assets/img/travel/Torino.jpg",
+    content: `My recent visit to Torino was a beautiful blend of science, culture, and inspiration. I attended the 6th International Conference on Fluorescent Biomolecules and their Building Blocks (FB3), where I presented my work and had meaningful conversations with researchers from around the world.
+
+The conference atmosphere was warm, collaborative, and energizing. I am grateful to the organizing team for creating such a thoughtful and well-run event that encouraged both rigorous discussion and genuine connection.
+
+Outside the conference sessions, Torino was unforgettable. The city's architecture, historic streets, and calm rhythm made every walk feel special, and the coffee culture was truly exceptional. It was a rewarding trip that left me motivated for the next chapter of my research journey.`,
+  },
   {
     city: "Phuket",
     date: "March 2025",
