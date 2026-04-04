@@ -22,13 +22,13 @@ Beyond the scientific sessions, Torino was an unforgettable host city. I am deep
 
 My PhD journey under the mentorship of Professor Xiaogang Liu has been nothing short of transformative. My research explored the "Computational Design and Mechanistic Investigation of Fluorophores Based on Excited State Conformational Dynamics." From uncovering mechanisms behind fluorescence umpolung to pushing the boundaries of NIR emission in fluorophores, this experience has fueled my passion for photochemistry and computational studies.
 
-I extend my heartfelt gratitude to my committee members—Prof. Desmond Loke, Dr. Mei Xuan Tan, and Prof. Yee Sin Ang—for their invaluable insights and guidance.
+I extend my heartfelt gratitude to my committee members (Prof. Desmond Loke, Dr. Mei Xuan Tan, and Prof. Yee Sin Ang) for their invaluable insights and guidance.
 
 Science is not just a career; it's a journey of curiosity and discovery. The challenges of research, the late-night simulations, and the camaraderie with fellow scientists have enriched this experience immeasurably.
 
 As I transition from student to professional, I'm eager to continue my research in luminescent materials, seeking collaborations that drive innovation and discovery in the field of photochemistry.
 
-A huge thank you to everyone in my network—mentors, colleagues, family, and friends—who supported me, challenged my ideas, and cheered me on every step of the way. Your support has been a cornerstone of my success.
+A huge thank you to everyone in my network (mentors, colleagues, family, and friends) who supported me, challenged my ideas, and cheered me on every step of the way. Your support has been a cornerstone of my success.
 
 I'm looking forward to sharing more about my research, upcoming publications, and the exciting projects I have on the horizon. Let's continue to push the boundaries of scientific knowledge together!`,
   },

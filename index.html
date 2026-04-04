@@ -12,12 +12,12 @@
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dr. Syed Ali Abbas Abedi | Computational Chemist | AI for Science & Molecular Design | SUTD</title>
+    <title>Dr. Syed Ali Abbas Abedi | Computational Chemist | AI for Science & Molecular Design | NTU</title>
     <!-- Updated: Auto-deploy trigger -->
     <meta name="google-site-verification" content="PVUXnXSVxiQnDK-JWYdA7JHWMvPK0nof9utSaCHU_B8" />
     <meta
       name="description"
-      content="Dr. Syed Ali Abbas Abedi - Postdoctoral Research Fellow at SUTD. Expert in AI-driven molecular design, computational chemistry, excited-state dynamics, TD-DFT, CASSCF, CASPT2, photostability, and machine learning for materials discovery."
+      content="Dr. Syed Ali Abbas Abedi - Research Fellow at NTU. Computational chemistry, AI-driven molecular design, excited-state dynamics, photostability, and machine learning for bioimaging and materials."
     />
     <meta name="keywords" content="Syed Ali Abbas Abedi, computational chemistry, AI for science, molecular design, excited-state dynamics, TD-DFT, CASSCF, CASPT2, photostability, machine learning, materials discovery, SUTD, Singapore University of Technology and Design, postdoctoral researcher, quantum chemistry, photochemistry, photoacoustic imaging, photothermal therapy, organic fluorophores, nonadiabatic dynamics" />
     <meta name="author" content="Dr. Syed Ali Abbas Abedi" />
@@ -28,7 +28,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://abedisyedaliabbas.github.io/abedi-research/" />
     <meta property="og:title" content="Dr. Syed Ali Abbas Abedi | Computational Chemist | AI for Science & Molecular Design" />
-    <meta property="og:description" content="Postdoctoral Research Fellow at SUTD. Expert in AI-driven molecular design, computational chemistry, excited-state dynamics, and machine learning for materials discovery." />
+    <meta property="og:description" content="Research Fellow at NTU. Computational chemistry, AI for molecular design, excited-state dynamics, and machine learning for imaging and materials." />
     <meta property="og:image" content="https://abedisyedaliabbas.github.io/abedi-research/assets/img/main/profile-photo.jpg" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Abedi's Research" />
@@ -37,7 +37,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://abedisyedaliabbas.github.io/abedi-research/" />
     <meta name="twitter:title" content="Dr. Syed Ali Abbas Abedi | Computational Chemist | AI for Science" />
-    <meta name="twitter:description" content="Postdoctoral Research Fellow at SUTD. Expert in AI-driven molecular design, computational chemistry, and machine learning." />
+    <meta name="twitter:description" content="Research Fellow at NTU. Computational chemistry, AI-driven molecular design, and machine learning for science." />
     <meta name="twitter:image" content="https://abedisyedaliabbas.github.io/abedi-research/assets/img/main/profile-photo.jpg" />
     
     <!-- Additional SEO Meta Tags -->
@@ -67,7 +67,16 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
-    
+    <script>
+      (function () {
+        try {
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+          if (localStorage.getItem("homeSplashDismissed") === "1") return;
+          document.documentElement.classList.add("home-wants-splash");
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- JSON-LD Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -77,12 +86,12 @@
       "alternateName": "Syed Ali Abbas Abedi",
       "url": "https://abedisyedaliabbas.github.io/abedi-research/",
       "image": "https://abedisyedaliabbas.github.io/abedi-research/assets/img/main/profile-photo.jpg",
-      "jobTitle": "Postdoctoral Research Fellow",
+      "jobTitle": "Research Fellow",
       "worksFor": {
         "@type": "Organization",
-        "name": "Singapore University of Technology and Design",
-        "alternateName": "SUTD",
-        "url": "https://www.sutd.edu.sg/"
+        "name": "Nanyang Technological University",
+        "alternateName": "NTU",
+        "url": "https://www.ntu.edu.sg/"
       },
       "alumniOf": [
         {
@@ -145,6 +154,26 @@
     </script>
   </head>
   <body data-theme="light">
+    <div id="homeSplash" class="home-splash" aria-modal="true" role="dialog" aria-labelledby="homeSplashTitle" aria-hidden="true">
+      <div class="home-splash-inner text-center px-3">
+        <p id="homeSplashTitle" class="home-splash-brand text-white mb-3">Abedi's Research</p>
+        <div class="home-splash-media">
+          <img
+            src="assets/img/main/animation.gif"
+            alt=""
+            class="home-splash-gif"
+            width="400"
+            height="300"
+            decoding="async"
+          />
+        </div>
+        <p class="home-splash-tagline text-white-50 mb-3 mt-3">Computational chemist</p>
+        <button type="button" class="btn btn-light btn-sm rounded-pill px-4 home-splash-skip" id="homeSplashSkip">
+          Enter site
+        </button>
+      </div>
+    </div>
+
     <header class="site-header sticky-top shadow-sm">
       <nav class="navbar navbar-expand-lg bg-white">
         <div class="container">
@@ -169,16 +198,7 @@
                 <a class="nav-link active" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#research">Research</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#education">Education</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#experience">Experience</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#partners">Affiliations</a>
+                <a class="nav-link" href="research.html">Research</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="publications.html">Publications</a>
@@ -198,310 +218,266 @@
       </nav>
     </header>
 
-    <main class="bg-light" id="home">
-      <section class="hero-section container py-5">
-        <div class="row align-items-start g-5">
-          <div class="col-lg-4 text-center text-lg-start">
-            <div class="profile-photo-wrapper mb-4">
-              <img 
-                src="assets/img/main/profile-photo.jpg" 
-                alt="Syed Ali Abbas Abedi" 
-                class="profile-photo img-fluid rounded-circle"
-                loading="eager"
-              />
-            </div>
-            <div class="profile-info">
-              <h1 class="h2 fw-bold mb-2">Syed Ali Abbas Abedi</h1>
-              <p class="text-muted mb-3" id="heroPosition">Postdoctoral Research Fellow</p>
-              <p class="text-muted small mb-4" id="heroOrg">Singapore University of Technology and Design</p>
-              
-              <!-- Quick Stats -->
-              <div class="quick-stats mb-4">
-                <div class="row g-3 text-center">
-                  <div class="col-4">
-                    <div class="stat-number text-primary fw-bold" id="heroCitations">484</div>
-                    <div class="stat-label text-muted small">Citations</div>
-                  </div>
-                  <div class="col-4">
-                    <div class="stat-number text-primary fw-bold" id="heroHIndex">11</div>
-                    <div class="stat-label text-muted small">h-index</div>
-                  </div>
-                  <div class="col-4">
-                    <div class="stat-number text-primary fw-bold" id="heroPublications">25</div>
-                    <div class="stat-label text-muted small">Papers</div>
-                  </div>
-                </div>
-              </div>
+    <main class="home-page" id="home">
+      <div class="home-ambient" aria-hidden="true"></div>
 
-              <!-- Social/Contact -->
-              <div class="profile-links">
-                <a href="publications.html" class="btn btn-outline-primary btn-sm mb-2 w-100">
-                  <i class="fa-solid fa-file-lines me-2"></i>View Publications
+      <section class="home-hero position-relative">
+        <div class="container position-relative py-4 py-lg-5">
+          <div class="row g-4 g-lg-4 align-items-stretch">
+            <div class="col-lg-6">
+              <p class="home-kicker mb-2">Computational chemistry · excited states · “wait, why is it glowing?”</p>
+              <h1 class="home-display-name mb-2 mb-sm-3">Syed Ali Abbas Abedi</h1>
+              <p class="home-role fs-5 fw-semibold mb-1" id="heroPosition">Research Fellow</p>
+              <p class="home-org text-muted mb-3" id="heroOrg">Nanyang Technological University (NTU)</p>
+              <p class="home-lead mb-0" id="heroLead"></p>
+              <div class="d-flex flex-wrap gap-2 mt-4 mb-3">
+                <a href="publications.html" class="btn btn-primary btn-lg rounded-pill px-4 home-btn-glow">
+                  <i class="fa-solid fa-file-lines me-2"></i>All publications
                 </a>
-                <a href="#contact" class="btn btn-outline-secondary btn-sm w-100">
-                  <i class="fa-solid fa-envelope me-2"></i>Get in Touch
+                <a
+                  href="https://scholar.google.com/citations?user=bcqvfOUAAAAJ&amp;hl=en"
+                  class="btn btn-outline-primary btn-lg rounded-pill px-4"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-google-scholar me-2"></i>Scholar
                 </a>
+                <a href="#contact" class="btn btn-link btn-lg text-decoration-none home-link-cta">Collaborate →</a>
+              </div>
+              <p class="home-bento-label mb-2">Focus areas</p>
+              <div class="d-flex flex-wrap gap-2 mb-3" id="heroKeywords"></div>
+              <div class="d-flex flex-wrap gap-3 align-items-center home-hero-mini">
+                <a href="research.html" class="text-decoration-none small text-muted"><i class="fa-solid fa-flask me-1 text-primary"></i>Research</a>
+                <a href="#education" class="text-decoration-none small text-muted"><i class="fa-solid fa-graduation-cap me-1 text-primary"></i>Education</a>
+                <a href="travel.html" class="text-decoration-none small text-muted"><i class="fa-solid fa-globe me-1 text-primary"></i>Travel</a>
               </div>
             </div>
-          </div>
-          
-          <div class="col-lg-8">
-            <div class="hero-content">
-              <h2 class="h3 fw-bold mb-3">About My Research</h2>
-              <div class="lead-text mb-4">
-                <p class="mb-3">
-                  I'm a computational chemist working at the intersection of artificial intelligence and molecular design. My research focuses on understanding and designing photostable organic materials using quantum chemical methods and machine learning approaches.
-                </p>
-                <p class="mb-3">
-                  Currently, I'm developing AI-guided fluorophores for biomedical imaging applications, particularly photoacoustic imaging and photothermal therapy. By combining quantum mechanical simulations (TD-DFT, CASSCF, CASPT2) with machine learning predictions, I aim to accelerate the discovery of next-generation molecular probes.
-                </p>
-                <p>
-                  Previously, I completed my PhD at SUTD investigating excited-state conformational dynamics of organic dyes. I've also spent time as a visiting researcher at UCL and Queen Mary University in London, collaborating on photostability mechanisms and nonadiabatic dynamics simulations.
-                </p>
-              </div>
-              
-              <!-- Research Interests -->
-              <div class="research-interests mb-4">
-                <h3 class="h5 fw-semibold mb-3">Research Interests</h3>
-                <div class="d-flex flex-wrap gap-2" id="heroKeywords">
-                  <span class="badge rounded-pill bg-light text-dark border">Computational Chemistry</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Machine Learning</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Photostability</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Excited-State Dynamics</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Molecular Design</span>
-                  <span class="badge rounded-pill bg-light text-dark border">Bioimaging</span>
-                  <span class="badge rounded-pill bg-light text-dark border">TD-DFT</span>
-                  <span class="badge rounded-pill bg-light text-dark border">CASSCF/CASPT2</span>
+            <div class="col-lg-6">
+              <div class="home-bento">
+                <div class="home-bento-photo">
+                  <img
+                    src="assets/img/main/profile-photo.jpg"
+                    alt="Syed Ali Abbas Abedi"
+                    class="home-bento-img"
+                    loading="eager"
+                  />
+                  <div class="home-bento-photo-accent"></div>
                 </div>
-              </div>
-
-              <!-- Quick Links -->
-              <div class="quick-links">
-                <a href="#research" class="text-decoration-none me-4">
-                  <i class="fa-solid fa-flask text-primary me-2"></i>Research
-                </a>
-                <a href="#education" class="text-decoration-none me-4">
-                  <i class="fa-solid fa-graduation-cap text-primary me-2"></i>Education
-                </a>
-                <a href="travel.html" class="text-decoration-none">
-                  <i class="fa-solid fa-globe text-primary me-2"></i>Travel Blog
-                </a>
+                <div class="home-bento-aside">
+                  <div class="home-bento-stats">
+                    <p class="home-bento-label mb-2">Scholar snapshot</p>
+                    <div class="row g-2 text-center">
+                      <div class="col-4">
+                        <div class="home-stat-value" id="heroCitations">484</div>
+                        <div class="home-stat-label">Citations</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="home-stat-value" id="heroHIndex">11</div>
+                        <div class="home-stat-label">h-index</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="home-stat-value" id="heroPublications">25</div>
+                        <div class="home-stat-label">Papers</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="home-bento-quote">
+                    <p class="home-quote-text mb-0">
+                      Calculate honestly, iterate until bench and tissue agree.
+                    </p>
+                  </div>
+                  <div class="home-bento-tools">
+                    <p class="home-bento-label mb-1">Toolkit</p>
+                    <div class="home-toolkit-chips" id="heroToolkit"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="research" class="py-5 bg-white">
+      <section id="papers" class="home-section home-papers py-5">
         <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Research</span>
-            <h2 class="fw-bold">Research Areas</h2>
-            <p class="text-muted">My work spans computational methods and AI-driven molecular design</p>
+          <div class="row align-items-end mb-4 mb-lg-5">
+            <div class="col-lg-8">
+              <span class="home-eyebrow">Signature work</span>
+              <h2 class="home-section-title mb-2">Papers people actually open</h2>
+              <p class="text-muted mb-0 home-section-sub">
+                A few highlights: reviews, methods, and imaging-oriented chemistry. See the full list anytime.
+              </p>
+            </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+              <a href="publications.html" class="btn btn-outline-primary rounded-pill">Full publication list</a>
+            </div>
           </div>
-          <div class="row g-4" id="researchCards"></div>
+          <div class="row g-4" id="featuredPapers"></div>
         </div>
       </section>
 
-      <section id="education" class="py-5">
+      <section id="research" class="home-section home-research-snippet py-4 py-lg-5">
         <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Background</span>
-            <h2 class="fw-bold">Education & Training</h2>
-            <p class="text-muted">
-              My academic journey across engineering, chemistry, and applied mathematics
+          <div class="row justify-content-center">
+            <div class="col-lg-11 col-xl-10">
+              <div
+                class="home-research-snippet-inner d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between gap-3 gap-lg-4 p-4 p-lg-4 rounded-4 border shadow-sm"
+              >
+                <div class="flex-grow-1 min-w-0">
+                  <span class="home-eyebrow">Research</span>
+                  <h2 class="h4 fw-bold mb-2 mt-1">Excited states, AI-guided probes, photostable materials</h2>
+                  <p class="text-muted small mb-0">
+                    Quantum chemistry and ML in one loop with experiment: mechanisms, imaging-oriented design, and stress-testing in silico before the bench.
+                    <a href="research.html" class="text-primary fw-semibold text-decoration-none ms-1">Read the full overview →</a>
+                  </p>
+                </div>
+                <div class="flex-shrink-0">
+                  <a href="research.html" class="btn btn-primary rounded-pill px-4 home-btn-glow">Research page</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education" class="home-section home-edu py-5">
+        <div class="container">
+          <div class="text-center mb-5">
+            <span class="home-eyebrow">Background</span>
+            <h2 class="home-section-title">Education &amp; training</h2>
+            <p class="text-muted home-section-sub mx-auto" style="max-width: 560px">
+              Engineering roots, chemistry depth, and a long-running obsession with how molecules behave after they absorb light.
             </p>
           </div>
           <div class="timeline" id="educationTimeline"></div>
         </div>
       </section>
 
-      <section id="experience" class="py-5 bg-white">
+      <section id="experience" class="home-section home-exp py-5">
         <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Experience</span>
-            <h2 class="fw-bold">Research Positions & Collaborations</h2>
-            <p class="text-muted">My research journey across different institutions</p>
+          <div class="text-center mb-5">
+            <span class="home-eyebrow">Experience</span>
+            <h2 class="home-section-title">Where I’ve worked</h2>
+            <p class="text-muted home-section-sub mx-auto" style="max-width: 560px">
+              Singapore, London, and a lot of quality time with clusters and GPUs.
+            </p>
           </div>
           <div class="row g-4" id="experienceCards"></div>
         </div>
       </section>
 
-      <section id="partners" class="py-5">
+      <section id="partners" class="home-section home-partners py-5">
         <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="eyebrow">Collaborations</span>
-            <h2 class="fw-bold">Institutions & Partners</h2>
-            <p class="text-muted">
-              Universities and institutions where I've studied and worked
+          <div class="text-center mb-5">
+            <span class="home-eyebrow">Affiliations</span>
+            <h2 class="home-section-title">Universities &amp; partners</h2>
+            <p class="text-muted home-section-sub mx-auto" style="max-width: 520px">
+              Institutions that shaped the journey, past and present.
             </p>
           </div>
           <div
-            class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 align-items-center"
+            class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4 align-items-center justify-content-center"
             id="partnerLogos"
           ></div>
         </div>
       </section>
 
-      <section id="news" class="py-5">
+      <section id="news" class="home-section home-news py-5">
         <div class="container">
-          <div class="section-heading text-center mb-5">
-            <span class="eyebrow">News & Highlights</span>
-            <h2 class="fw-bold">Celebrating milestones</h2>
-            <p class="text-muted">
-              Recent announcements and achievements. 
-              <a href="news.html" class="text-decoration-none">View all news →</a>
-            </p>
-          </div>
-          <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-              <div class="card-gradient p-4 h-100 text-center">
-                <i class="fa-solid fa-graduation-cap fa-2x text-primary mb-3"></i>
-                <h3 class="h5 fw-semibold">PhD Graduation</h3>
-                <p class="text-muted small">Successfully completed PhD in Computational Chemistry</p>
-                <a href="news.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
-              </div>
+          <div class="row align-items-end mb-4 mb-lg-5">
+            <div class="col-lg-8">
+              <span class="home-eyebrow">News</span>
+              <h2 class="home-section-title mb-2">Milestones &amp; moments</h2>
+              <p class="text-muted mb-0">Grants, talks, conferences, and the occasional celebration.</p>
             </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="card-gradient p-4 h-100 text-center">
-                <i class="fa-solid fa-trophy fa-2x text-primary mb-3"></i>
-                <h3 class="h5 fw-semibold">Bursary Award</h3>
-                <p class="text-muted small">Awarded bursary for Summer School in Catalysis</p>
-                <a href="news.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="card-gradient p-4 h-100 text-center">
-                <i class="fa-solid fa-microphone fa-2x text-primary mb-3"></i>
-                <h3 class="h5 fw-semibold">Conference Talk</h3>
-                <p class="text-muted small">Oral presentation at Fluorescent Biomolecules Conference</p>
-                <a href="news.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-              <div class="card-gradient p-4 h-100 text-center">
-                <i class="fa-solid fa-globe fa-2x text-primary mb-3"></i>
-                <h3 class="h5 fw-semibold">APC Conference</h3>
-                <p class="text-muted small">12th Asian Photochemistry Conference in Melbourne</p>
-                <a href="news.html" class="btn btn-sm btn-outline-primary mt-2">Read More</a>
-              </div>
+            <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+              <a href="news.html" class="btn btn-primary rounded-pill home-btn-glow">Read the full news page</a>
             </div>
           </div>
+          <div class="row g-4" id="homeNewsGrid"></div>
         </div>
       </section>
 
-      <section id="contact" class="py-5 bg-white">
+      <section id="contact" class="home-section home-contact py-5">
         <div class="container">
-          <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
-              <div class="section-heading mb-4">
-                <span class="eyebrow">Contact</span>
-                <h2 class="fw-bold">Let’s collaborate</h2>
-                <p class="text-muted">
-                  Whether you’re building photostable materials or inventing
-                  biomedical sensors, drop a line.
+          <div class="home-contact-panel p-4 p-lg-5 rounded-4">
+            <div class="row g-4 g-lg-5 align-items-start">
+              <div class="col-lg-5">
+                <span class="home-eyebrow home-eyebrow-light">Contact</span>
+                <h2 class="home-section-title text-white mb-3">Let’s build something worth simulating</h2>
+                <p class="text-white-50 mb-4">
+                  Academia or industry: if you care about excited states, fluorophores, or ML-guided molecular design, I’m happy to talk.
                 </p>
-              </div>
-              <div class="contact-card p-4 rounded-4 shadow-sm bg-white">
-                <div class="d-flex align-items-center gap-3 mb-3">
-                  <div class="icon-circle bg-primary-subtle text-primary">
-                    <i class="fa-solid fa-envelope"></i>
-                  </div>
-                  <div>
-                    <p class="text-uppercase small text-muted mb-0">Email</p>
-                    <a
-                      class="fw-semibold text-decoration-none"
-                      href="mailto:abedisyedaliabbas@gmail.com"
-                      >abedisyedaliabbas@gmail.com</a
-                    >
-                  </div>
-                </div>
-                <div class="d-flex align-items-center gap-3">
-                  <div class="icon-circle bg-primary-subtle text-primary">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </div>
-                  <div>
-                    <p class="text-uppercase small text-muted mb-0">
-                      LinkedIn
-                    </p>
-                    <a 
-                      class="fw-semibold text-decoration-none" 
-                      href="https://www.linkedin.com/in/abedisyedali/"
-                      target="_blank"
-                      rel="noopener"
-                      >Connect professionally</a
-                    >
-                  </div>
+                <div class="d-flex flex-column gap-3">
+                  <a href="mailto:abedisyedaliabbas@gmail.com" class="home-contact-link">
+                    <i class="fa-solid fa-envelope me-2"></i>abedisyedaliabbas@gmail.com
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/abedisyedali/"
+                    class="home-contact-link"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <i class="fa-brands fa-linkedin me-2"></i>LinkedIn
+                  </a>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-6">
-              <form 
-                name="contact" 
-                method="POST" 
-                action="https://formspree.io/f/mjkjgalv"
-                class="p-4 rounded-4 bg-white shadow-sm"
-                id="contactForm"
-              >
-                <!-- Hidden field for Formspree -->
-                <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio" />
-                <input type="hidden" name="_next" value="" />
-                
-                <!-- Success/Error Messages -->
-                <div id="formMessage" class="alert d-none" role="alert"></div>
-                
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label for="name" class="form-label">Full name <span class="text-danger">*</span></label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      class="form-control"
-                      placeholder="Your name"
-                      required
-                    />
+              <div class="col-lg-7">
+                <form
+                  name="contact"
+                  method="POST"
+                  action="https://formspree.io/f/mjkjgalv"
+                  class="home-contact-form p-4 rounded-4"
+                  id="contactForm"
+                >
+                  <input type="hidden" name="_subject" value="New Contact Form Submission from Portfolio" />
+                  <input type="hidden" name="_next" value="" />
+                  <div id="formMessage" class="alert d-none" role="alert"></div>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="name" class="form-label">Full name <span class="text-danger">*</span></label>
+                      <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="organization" class="form-label">Organization</label>
+                      <input
+                        type="text"
+                        id="organization"
+                        name="organization"
+                        class="form-control"
+                        placeholder="Your organization"
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                        placeholder="you@institution.org"
+                        required
+                      />
+                    </div>
+                    <div class="col-12">
+                      <label for="message" class="form-label">What’s on your mind? <span class="text-danger">*</span></label>
+                      <textarea
+                        id="message"
+                        name="message"
+                        class="form-control"
+                        rows="4"
+                        placeholder="Collaboration idea, role, or paper you’d like to discuss…"
+                        required
+                      ></textarea>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary rounded-pill px-4" type="submit" id="submitBtn">
+                        <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
+                        Send message
+                      </button>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <label for="organization" class="form-label">Organization</label>
-                    <input
-                      type="text"
-                      id="organization"
-                      name="organization"
-                      class="form-control"
-                      placeholder="Your organization"
-                    />
-                  </div>
-                  <div class="col-12">
-                    <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      class="form-control"
-                      placeholder="your.email@example.com"
-                      required
-                    />
-                  </div>
-                  <div class="col-12">
-                    <label for="message" class="form-label">Project idea <span class="text-danger">*</span></label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      class="form-control"
-                      rows="4"
-                      placeholder="Tell me about your project idea..."
-                      required
-                    ></textarea>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary w-100" type="submit" id="submitBtn">
-                      <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
-                      Send message
-                    </button>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>

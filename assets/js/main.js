@@ -4,22 +4,88 @@ const profileData = {
   focus: "AI-Driven Molecular Design & Photoacoustic Imaging",
   methods: "AI/ML · TD-DFT · CASSCF · CASPT2",
   vision: "AI-accelerated discovery of smarter, more sustainable materials",
+  heroLead:
+    "I spend a lot of time on quantum chemical calculations, then I talk (a lot) with experimental colleagues so the story doesn't stop at the screen. Bench, microscope, spectrum: that's where the loop closes.",
+  keywords: [
+    "Quantum chemical calculations",
+    "Exp ↔ theory",
+    "Photostability",
+    "Excited states",
+    "Molecular design",
+    "Bioimaging probes",
+    "AI / ML",
+    "HPC workflows",
+  ],
 };
+
+const toolkitChips = [
+  { label: "TD-DFT" },
+  { label: "SF-TDDFT" },
+  { label: "MRSF-TDDFT" },
+  { label: "CASSCF" },
+  { label: "CASPT2" },
+  { label: "Nonadiabatic dynamics" },
+  { label: "Quantum chemical calculations" },
+  { label: "Spectra ↔ structures" },
+  { label: "Python · HPC" },
+  { label: "Multimodal ML", soon: true },
+];
+
+const heroMetrics = {
+  citations: "484",
+  hIndex: "11",
+  papers: "25",
+};
+
+const featuredPapers = [
+  {
+    tag: "Review",
+    title:
+      "Mechanistic insights into the design of fluorogenic molecules for wash-free biological applications",
+    venue: "Chemical Society Reviews",
+    year: 2026,
+    href: "https://pubs.rsc.org/ko/content/articlelanding/2026/cs/d5cs01519g",
+  },
+  {
+    tag: "Methods",
+    title:
+      "Super-photostable organic dye for long-term live-cell single-protein imaging",
+    venue: "Nature Methods",
+    year: 2025,
+    href: "https://www.nature.com/articles/s41592-024-02584-0",
+  },
+  {
+    tag: "Article",
+    title:
+      "Fluorescence umpolung enables light-up sensing of N-acetyltransferases and nerve agents",
+    venue: "Nature Communications",
+    year: 2021,
+    href: "https://www.nature.com/articles/s41467-021-24187-5",
+  },
+  {
+    tag: "Article",
+    title:
+      "Rational design and application of an indolium-derived heptamethine cyanine with record-long second near-infrared emission",
+    venue: "CCS Chemistry",
+    year: 2022,
+    href: "https://www.chinesechemsoc.org/doi/full/10.31635/ccschem.021.202101630",
+  },
+];
 
 const researchPillars = [
   {
     icon: "fa-flask", // Changed from fa-microscope to fa-flask (more common icon)
     title: "Excited-State Dynamics",
     summary:
-      "TD-DFT, CASSCF, and CASPT2 methods to unravel mechanisms behind ultralong phosphorescence and photoinduced processes.",
-    badges: ["TD-DFT", "CASSCF", "CASPT2"],
+      "Quantum chemical calculations (TD-DFT and variants, CASSCF/CASPT2) to unravel mechanisms behind photophysics, ultralong emission, and photoinduced processes.",
+    badges: ["TD-DFT", "SF-TDDFT", "CASSCF", "CASPT2"],
   },
   {
     icon: "fa-atom", // Changed from fa-dna to fa-atom (more common icon)
     title: "AI-Enhanced Molecular Engineering",
     summary:
-      "AI-guided design of organic fluorophores for photoacoustic imaging and photothermal therapy, combining machine learning predictions with quantum chemical modeling for biomedical applications.",
-    badges: ["AI-Guided Design", "Photoacoustic", "Photothermal"],
+      "AI-guided design of organic fluorophores for photoacoustic imaging and photothermal therapy, pairing machine learning with quantum chemical calculations. Multimodal ML (structures, spectra, microscopy) is next on my roadmap.",
+    badges: ["AI-Guided Design", "Photoacoustic", "Photothermal", "Multimodal ML (soon)"],
   },
   {
     icon: "fa-lightbulb", // Changed from fa-earth-asia to fa-lightbulb (more common icon)
@@ -149,6 +215,12 @@ const partnerLogos = [
 
 const newsHighlights = [
   {
+    title: "FB3 2026 in Torino: presented and connected",
+    description:
+      "Shared work and met colleagues at the 6th International Conference on Fluorescent Biomolecules and their Building Blocks in Italy, with support from NTU and MOE Singapore.",
+    tag: "Conference",
+  },
+  {
     title: "Celebrating My PhD Graduation in Computational Chemistry!",
     description:
       "Successfully completed PhD in Science, Maths and Technology at SUTD, focusing on excited-state conformational dynamics of organic dyes.",
@@ -179,28 +251,34 @@ const heroVideo = ""; // Add your video URL here when available
 
 // Hero card removed - profile data kept for potential future use
 
-function renderResearchCards() {
-  const container = document.getElementById("researchCards");
-  if (!container) return;
-  container.innerHTML = researchPillars
+function researchCardsMarkup() {
+  return researchPillars
     .map(
-      (pillar) => `
+      (pillar, i) => `
       <div class="col-md-4">
-        <div class="card-gradient p-4 h-100">
-          <h3 class="h5 fw-semibold">${pillar.title}</h3>
-          <p class="text-muted">${pillar.summary}</p>
-          <div class="d-flex flex-wrap gap-2">
+        <article class="home-pillar-card h-100 home-pillar-card--${i + 1}">
+          <div class="home-pillar-icon text-primary">
+            <i class="fa-solid ${pillar.icon}"></i>
+          </div>
+          <h3 class="h5 fw-bold mb-3">${pillar.title}</h3>
+          <p class="text-muted mb-4">${pillar.summary}</p>
+          <div class="d-flex flex-wrap gap-2 mt-auto">
             ${pillar.badges
               .map(
                 (badge) =>
-                  `<span class="badge rounded-pill text-bg-light border">${badge}</span>`
+                  `<span class="home-pillar-badge">${badge}</span>`
               )
               .join("")}
           </div>
-        </div>
+        </article>
       </div>`
     )
     .join("");
+}
+
+function renderResearchCards() {
+  const el = document.getElementById("researchPageCards");
+  if (el) el.innerHTML = researchCardsMarkup();
 }
 
 function renderTimeline() {
@@ -225,21 +303,21 @@ function renderExperience() {
   container.innerHTML = experienceData
     .map(
       (exp) => `
-      <div class="col-md-4">
-        <div class="card-gradient p-4 h-100">
-          <p class="text-uppercase small text-muted mb-1">${exp.duration}</p>
-          <h3 class="h5 fw-semibold">${exp.role}</h3>
-          <p class="mb-2">${exp.org}</p>
+      <div class="col-md-6 col-lg-4">
+        <article class="home-exp-card h-100">
+          <p class="home-exp-duration">${exp.duration}</p>
+          <h3 class="h5 fw-bold mb-2">${exp.role}</h3>
+          <p class="mb-1 fw-medium">${exp.org}</p>
           <p class="text-muted small mb-3">${exp.location}</p>
-          <ul class="list-unstyled text-muted">
+          <ul class="list-unstyled text-muted small mb-0">
             ${exp.highlights
               .map(
                 (point) =>
-                  `<li class="mb-2"><i class="fa-solid fa-check text-primary me-2"></i>${point}</li>`
+                  `<li class="mb-2 ps-3 home-exp-li">${point}</li>`
               )
               .join("")}
           </ul>
-        </div>
+        </article>
       </div>`
     )
     .join("");
@@ -279,22 +357,77 @@ function renderPartnerLogos() {
 
 // Intro video button removed
 
+function renderHeroKeywords() {
+  const el = document.getElementById("heroKeywords");
+  if (!el || !profileData.keywords) return;
+  el.innerHTML = profileData.keywords
+    .map((k) => `<span class="home-keyword-pill">${k}</span>`)
+    .join("");
+}
+
+function renderToolkit() {
+  const el = document.getElementById("heroToolkit");
+  if (!el) return;
+  el.innerHTML = toolkitChips
+    .map((item) => {
+      const cls = item.soon ? "home-tool-chip home-tool-chip--soon" : "home-tool-chip";
+      const suffix = item.soon ? `<span class="home-tool-soon">soon</span>` : "";
+      return `<span class="${cls}">${item.label}${suffix}</span>`;
+    })
+    .join("");
+}
+
+function renderFeaturedPapers() {
+  const container = document.getElementById("featuredPapers");
+  if (!container) return;
+  container.innerHTML = featuredPapers
+    .map(
+      (p) => `
+      <div class="col-md-6">
+        <a class="home-paper-card text-decoration-none h-100 d-block" href="${p.href}" target="_blank" rel="noopener">
+          <span class="home-paper-tag">${p.tag}</span>
+          <h3 class="home-paper-title">${p.title}</h3>
+          <p class="home-paper-meta mb-0">${p.venue} · ${p.year}</p>
+          <span class="home-paper-link">Open paper <i class="fa-solid fa-arrow-up-right-from-square ms-1 small"></i></span>
+        </a>
+      </div>`
+    )
+    .join("");
+}
+
+function renderHomeNews() {
+  const container = document.getElementById("homeNewsGrid");
+  if (!container) return;
+  container.innerHTML = newsHighlights
+    .map(
+      (n) => `
+      <div class="col-md-6 col-lg-3">
+        <article class="home-news-tile h-100">
+          <span class="home-news-tag">${n.tag}</span>
+          <h3 class="home-news-title">${n.title}</h3>
+          <p class="home-news-desc">${n.description}</p>
+        </article>
+      </div>`
+    )
+    .join("");
+}
+
 function renderHeroStats() {
-  // Update hero section stats
   const citationsEl = document.getElementById("heroCitations");
   const hIndexEl = document.getElementById("heroHIndex");
   const publicationsEl = document.getElementById("heroPublications");
-  
-  if (citationsEl) citationsEl.textContent = "484";
-  if (hIndexEl) hIndexEl.textContent = "11";
-  if (publicationsEl) publicationsEl.textContent = "25";
-  
-  // Update hero position
+
+  if (citationsEl) citationsEl.textContent = heroMetrics.citations;
+  if (hIndexEl) hIndexEl.textContent = heroMetrics.hIndex;
+  if (publicationsEl) publicationsEl.textContent = heroMetrics.papers;
+
   const positionEl = document.getElementById("heroPosition");
   const orgEl = document.getElementById("heroOrg");
-  
+  const leadEl = document.getElementById("heroLead");
+
   if (positionEl) positionEl.textContent = profileData.currentRole;
   if (orgEl) orgEl.textContent = profileData.currentOrg;
+  if (leadEl) leadEl.textContent = profileData.heroLead || "";
 }
 
 // Handle contact form submission with Formspree
@@ -391,8 +524,64 @@ function initContactForm() {
   });
 }
 
+const SPLASH_AUTO_MS = 5000;
+const SPLASH_STORAGE_KEY = "homeSplashDismissed";
+
+function initHomeSplash() {
+  const root = document.documentElement;
+  if (!root.classList.contains("home-wants-splash")) return;
+
+  const splash = document.getElementById("homeSplash");
+  const skipBtn = document.getElementById("homeSplashSkip");
+  const splashImg = splash?.querySelector(".home-splash-gif");
+
+  const close = () => {
+    try {
+      localStorage.setItem(SPLASH_STORAGE_KEY, "1");
+    } catch (e) {
+      /* private mode / blocked storage */
+    }
+    root.classList.remove("home-wants-splash");
+    if (splash) {
+      splash.setAttribute("aria-hidden", "true");
+    }
+  };
+
+  if (splash) splash.setAttribute("aria-hidden", "false");
+
+  if (splashImg) {
+    splashImg.addEventListener("error", () => {
+      splashImg.replaceWith(
+        Object.assign(document.createElement("p"), {
+          className: "text-white-50 small mb-0 px-2",
+          textContent: "Add your clip as assets/img/main/animation.gif",
+        })
+      );
+    });
+  }
+
+  let t;
+  const dismiss = () => {
+    clearTimeout(t);
+    close();
+  };
+
+  t = setTimeout(dismiss, SPLASH_AUTO_MS);
+  skipBtn?.addEventListener("click", dismiss);
+  document.addEventListener("keydown", function onEscSplash(ev) {
+    if (ev.key !== "Escape") return;
+    document.removeEventListener("keydown", onEscSplash);
+    dismiss();
+  });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initHomeSplash();
   renderHeroStats();
+  renderHeroKeywords();
+  renderToolkit();
+  renderFeaturedPapers();
+  renderHomeNews();
   renderResearchCards();
   renderTimeline();
   renderExperience();

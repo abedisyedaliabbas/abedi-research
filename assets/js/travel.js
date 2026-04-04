@@ -172,7 +172,7 @@ We rented a motorbike for the day, a decision that added an element of thrill an
 
 Phuket's safety and warmth stood out. At every turn, the locals were welcoming, the streets felt secure, and the overall atmosphere was calm yet vibrant. There's something truly comforting about an island that feels as alive at sunrise as it does at nightfall.
 
-And then there's the food—Thai cuisine in its home context is nothing short of extraordinary. Whether it was a spicy green curry by the beach, a roadside pad kra pao bursting with flavor, or the refreshing sweetness of mango sticky rice, each meal was a celebration of freshness and bold taste. But it wasn't just the dishes that made it memorable, it was the 7-Eleven culture that quietly stole my heart. The sheer variety of snacks, hot meals, and iced drinks available at any hour was both delightfully quirky and unexpectedly comforting.`
+And then there's the food, Thai cuisine in its home context is nothing short of extraordinary. Whether it was a spicy green curry by the beach, a roadside pad kra pao bursting with flavor, or the refreshing sweetness of mango sticky rice, each meal was a celebration of freshness and bold taste. But it wasn't just the dishes that made it memorable, it was the 7-Eleven culture that quietly stole my heart. The sheer variety of snacks, hot meals, and iced drinks available at any hour was both delightfully quirky and unexpectedly comforting.`
   },
   {
     city: "Amsterdam",
@@ -196,7 +196,7 @@ During my stay, I wandered through the cobbled lanes of Montmartre, indulged in 
 
 But the adventure didn't end in Paris. From there, I traveled to Amsterdam, where the canals and vibrant art scene provided a perfect continuation of my European escapade. The journey concluded in Milan, reuniting with my family for a festive celebration amidst the city's renowned fashion and culinary delights.
 
-Returning to Singapore, I carried with me not just souvenirs, but a treasure trove of memories and experiences from across Europe—each city adding its unique brushstroke to the canvas of my travels.`
+Returning to Singapore, I carried with me not just souvenirs, but a treasure trove of memories and experiences from across Europe, each city adding its unique brushstroke to the canvas of my travels.`
   },
   {
     city: "Liverpool",
@@ -216,7 +216,7 @@ But Liverpool offered more than just musical nostalgia. The city's architecture,
     cover: "assets/img/travel/hong-kong.jpg",
     content: `Have you ever wondered what it's like to walk the streets of Tokyo at night, surrounded by the neon glow of limitless possibility? Imagine, then, the vibrant streets of Hong Kong, where the scene morphs into an almost cinematic backdrop just after a refreshing rain shower. The streets glisten under the effervescent lights of the city, reflecting myriad colors on the slick pavement that just minutes ago was a canvas for the gentle drizzle.
 
-As I wandered through the bustling districts, the cool breeze carried with it the rich, earthy scent of rain-soaked concrete—a stark contrast to the day's earlier humidity. Around me, the city hadn't missed a beat; people with umbrellas in one hand and smartphones in the other darted in and out of the neon-lit shops and eateries, their conversations a melodious blend of Cantonese and snippets of other world languages. Each street corner was a blend of the traditional and the ultra-modern, from fragrant street food stalls offering warm, inviting dim sum, to towering digital billboards advertising the latest tech.
+As I wandered through the bustling districts, the cool breeze carried with it the rich, earthy scent of rain-soaked concrete, a stark contrast to the day's earlier humidity. Around me, the city hadn't missed a beat; people with umbrellas in one hand and smartphones in the other darted in and out of the neon-lit shops and eateries, their conversations a melodious blend of Cantonese and snippets of other world languages. Each street corner was a blend of the traditional and the ultra-modern, from fragrant street food stalls offering warm, inviting dim sum, to towering digital billboards advertising the latest tech.
 
 This night walk wasn't just a simple stroll; it was a dive into the heart of Hong Kong's living, breathing urban culture. The cold breeze didn't just touch my skin; it seemed to seep into my senses, invigorating and inviting me to delve deeper into the night, to discover more hidden alleyways and the stories they held. Every step was a narrative unfolding, every sight and sound a testament to the city's dynamic pulse.`
   },
@@ -229,7 +229,7 @@ This night walk wasn't just a simple stroll; it was a dive into the heart of Hon
 
 Each morning, as the first light painted the sky in hues of soft pinks and deep blues, I joined the locals on their runs along the wooden boardwalks that line the coast. The rhythmic sound of footsteps on wood mingled with the distant calls of seabirds, creating a tranquil soundtrack to our collective movement. People with their dogs, jogging or strolling, shared smiles and greetings, adding a warm, communal feel to the crisp morning air.
 
-These runs were more than just physical exercise; they were a meditation, a time to reflect. As I moved along the winding paths, with the Yarra's waters softly lapping at its banks and the vast ocean in sight, I found myself contemplating the journey of life—the ups and downs, the twists and turns. Like the river, we are all headed somewhere vast and unknown, and every step along this path, every person we meet, enriches our journey, adding layers of memories and lessons.
+These runs were more than just physical exercise; they were a meditation, a time to reflect. As I moved along the winding paths, with the Yarra's waters softly lapping at its banks and the vast ocean in sight, I found myself contemplating the journey of life, the ups and downs, the twists and turns. Like the river, we are all headed somewhere vast and unknown, and every step along this path, every person we meet, enriches our journey, adding layers of memories and lessons.
 
 Melbourne's serene mornings offered a stark contrast to the nocturnal energy of Hong Kong, yet both experiences were deeply enriching, each a different chapter in the story of my travels, teaching me more about the world and myself.`
   },
@@ -240,7 +240,7 @@ Melbourne's serene mornings offered a stark contrast to the nocturnal energy of 
     cover: "assets/img/travel/london.jpg",
     content: `From the airy coastlines of Melbourne, my journey next swept me into the bustling heart of London. The city, ever a tapestry of history and modernity, welcomed me with its iconic blend of gray skies and the steadfast grandeur of its architecture. In London, every street corner tells a story, every cobblestone holds a secret.
 
-My days were filled with the city's palpable energy, as I navigated through the bustling crowds of Piccadilly Circus and the serene pathways of Hyde Park. The imposing presence of Big Ben, the architectural elegance of the Houses of Parliament, and the bustling diversity of Camden Market—each site was a chapter of its own in the vast urban narrative that is London.
+My days were filled with the city's palpable energy, as I navigated through the bustling crowds of Piccadilly Circus and the serene pathways of Hyde Park. The imposing presence of Big Ben, the architectural elegance of the Houses of Parliament, and the bustling diversity of Camden Market, each site was a chapter of its own in the vast urban narrative that is London.
 
 As a visiting researcher, I spent much of my time collaborating with brilliant minds at local universities, delving deeper into the realms of computational chemistry. But beyond the lab, London's streets offered their own lessons through their museums, theatres, and cafes. The British Museum became a regular haunt, where I could spend hours lost among artifacts that spanned the breadth of human history.
 
@@ -250,7 +250,7 @@ Londoners, I found, were particularly spirited on game days. Whenever there was 
 
 Living with my childhood friends in London was a once-in-a-lifetime experience that turned the city into a home away from home. Together, we explored the bustling streets, shared countless meals, and relived old memories, making every moment uniquely special and deeply cherished.
 
-The few months I spent in London were transformative, adding layers of cultural appreciation and professional growth to my life's tapestry. The city taught me the value of resilience and adaptability—qualities mirrored in its people and its ever-evolving landscape.`
+The few months I spent in London were transformative, adding layers of cultural appreciation and professional growth to my life's tapestry. The city taught me the value of resilience and adaptability, qualities mirrored in its people and its ever-evolving landscape.`
   },
   {
     city: "Milan",
@@ -272,31 +272,31 @@ Exploring Milan with family by my side offered a unique perspective on the city'
 
 Navigating Venice was an adventure in itself. I chose to cycle along its narrow paths, an exhilarating way to explore the city's hidden gems and iconic landmarks. The absence of cars, replaced by the gentle lapping of canal waters, made cycling both peaceful and intimate.
 
-A highlight of my time in Venice was indulging in the local cuisine, particularly the dark chocolate Italian gelato. Each scoop was a decadent treat, rich and bursting with flavor, perfect after long rides or leisurely gondola tours. Venice wasn't just a city to visit; it was a city to experience—by bike, by boat, and by the taste of its unforgettable desserts.`
+A highlight of my time in Venice was indulging in the local cuisine, particularly the dark chocolate Italian gelato. Each scoop was a decadent treat, rich and bursting with flavor, perfect after long rides or leisurely gondola tours. Venice wasn't just a city to visit; it was a city to experience, by bike, by boat, and by the taste of its unforgettable desserts.`
   },
   {
     city: "Copenhagen",
     date: "2022",
     country: "Denmark",
     cover: "assets/img/travel/copenhagen.jpg",
-    content: `My journey brought me north to the charming streets of Copenhagen, Denmark. The city greeted me with its renowned Scandinavian flair—minimalist yet colorful architecture, expansive green parks, and a palpable sense of design in everything from coffee shops to public spaces.
+    content: `My journey brought me north to the charming streets of Copenhagen, Denmark. The city greeted me with its renowned Scandinavian flair, minimalist yet colorful architecture, expansive green parks, and a palpable sense of design in everything from coffee shops to public spaces.
 
 Copenhagen's beauty was matched by the friendliness of its people. The Danes, with their tall stature and bright smiles, were incredibly welcoming, making me feel at home amidst the breezy, bicycle-friendly boulevards. It was easy to see why this city is often celebrated for its quality of life.
 
 Exploring Copenhagen, I was struck by the seamless blend of historical charm and modern innovation. From the iconic silhouette of Nyhavn's colorful facades to the cutting-edge design of the Black Diamond Library, each site spoke of a community that cherishes its past while enthusiastically embracing the future.
 
-The Scandinavian feel of the city—its clean streets, its casual yet fashionable crowd, and its commitment to sustainability—made every moment refreshing. Whether I was enjoying a cozy moment in a local café or cycling along the waterfront, Copenhagen offered a tranquil yet vibrant atmosphere that was truly unique.`
+The Scandinavian feel of the city, its clean streets, its casual yet fashionable crowd, and its commitment to sustainability, made every moment refreshing. Whether I was enjoying a cozy moment in a local café or cycling along the waterfront, Copenhagen offered a tranquil yet vibrant atmosphere that was truly unique.`
   },
   {
     city: "Dubai",
     date: "2022",
     country: "United Arab Emirates",
     cover: "assets/img/travel/dubai.jpg",
-    content: `I also took a tour to the dazzling city of Dubai to visit my sister and her beautiful daughter, Soha. Dubai stood as a testament to human ingenuity—a city carved out of the desert, now a bustling metropolis where skyscrapers stretch towards the sky and luxury echoes in its air.
+    content: `I also took a tour to the dazzling city of Dubai to visit my sister and her beautiful daughter, Soha. Dubai stood as a testament to human ingenuity, a city carved out of the desert, now a bustling metropolis where skyscrapers stretch towards the sky and luxury echoes in its air.
 
 The city's transformation from arid sands to a vibrant oasis is nothing short of mesmerizing. In Dubai, every street corner tells the story of ambition and innovation, from the towering Burj Khalifa to the sprawling malls that are a shopper's paradise. Yet, it's the diversity of its people that truly defines Dubai. Here, cultures from every corner of the globe converge, creating a melting pot of traditions, cuisines, and languages.
 
-Spending time with my sister and niece in this futuristic landscape brought a comforting sense of family to the grandeur around us. Together, we explored the city—from its lush gardens to its artificial islands—marveling at how Dubai has sculpted itself into a global hub. It was a wonderful blend of family warmth amid the backdrop of Dubai's relentless ambition.`
+Spending time with my sister and niece in this futuristic landscape brought a comforting sense of family to the grandeur around us. Together, we explored the city, from its lush gardens to its artificial islands, marveling at how Dubai has sculpted itself into a global hub. It was a wonderful blend of family warmth amid the backdrop of Dubai's relentless ambition.`
   },
   {
     city: "Istanbul",
@@ -309,14 +309,14 @@ As I wandered through Istanbul, I was struck by the city's deep sense of history
 
 Exploring the vast arrays of shops in the Grand Bazaar, I was enchanted by the vibrant tapestries, delicate ceramics, and the sparkling allure of Turkish lamps, each piece telling a story of craftsmanship passed down through generations. The call to prayer echoed through the streets, adding to the mesmerizing atmosphere of this historic metropolis.
 
-Istanbul captivated me completely—its blend of ancient tradition and bustling modern life created a tapestry as rich and colorful as the goods in its markets. Every day spent in this city was a deep dive into a living history, a vibrant culture, and a culinary adventure I will never forget.`
+Istanbul captivated me completely, its blend of ancient tradition and bustling modern life created a tapestry as rich and colorful as the goods in its markets. Every day spent in this city was a deep dive into a living history, a vibrant culture, and a culinary adventure I will never forget.`
   },
   {
     city: "Bangkok",
     date: "2023",
     country: "Thailand",
     cover: "assets/img/travel/bangkok.jpg",
-    content: `My journey also took me to the vibrant streets of Bangkok, Thailand, where my friend Earth and his girlfriend, Aoy, hosted me with the utmost warmth and generosity. Bangkok, a city pulsating with life, dazzled me with its colorful markets, golden temples, and the ever-present aroma of delicious street food. From the spicy tang of pad thai to the sweet chill of mango sticky rice, every meal was a feast for the senses. Earth and Aoy, knowing my curiosity for local flavors, introduced me to the lesser-known culinary gems of the city—like the fiery boat noodles and the refreshing Thai iced tea, adding depth to my culinary adventure.
+    content: `My journey also took me to the vibrant streets of Bangkok, Thailand, where my friend Earth and his girlfriend, Aoy, hosted me with the utmost warmth and generosity. Bangkok, a city pulsating with life, dazzled me with its colorful markets, golden temples, and the ever-present aroma of delicious street food. From the spicy tang of pad thai to the sweet chill of mango sticky rice, every meal was a feast for the senses. Earth and Aoy, knowing my curiosity for local flavors, introduced me to the lesser-known culinary gems of the city, like the fiery boat noodles and the refreshing Thai iced tea, adding depth to my culinary adventure.
 
 Earth made sure I experienced the full spectrum of Thai hospitality and culture. We explored the sprawling cityscape, visiting iconic spots like the Grand Palace and the bustling night markets, where the air buzzed with the chatter of locals and tourists alike.
 
@@ -329,13 +329,13 @@ The kindness and friendliness of the Thai people were evident everywhere we went
     date: "2022",
     country: "Saudi Arabia",
     cover: "assets/img/travel/riyadh.jpg",
-    content: `My travels also led me to the dynamic city of Riyadh, a place where the vibrancy of modern life seamlessly blends with rich traditions. The city is alive at all hours, buzzing with the energy of bustling markets and illuminated streets. The local cuisine was a delightful exploration of flavors—each dish, from savory kabsa to sweet kunafa, was a new discovery.
+    content: `My travels also led me to the dynamic city of Riyadh, a place where the vibrancy of modern life seamlessly blends with rich traditions. The city is alive at all hours, buzzing with the energy of bustling markets and illuminated streets. The local cuisine was a delightful exploration of flavors, each dish, from savory kabsa to sweet kunafa, was a new discovery.
 
 Reuniting with my old friend Tabish was one of the highlights of my visit. It had been years since we last met, and his hospitality was unparalleled. Tabish drove me around, showing me both the well-known and hidden gems of Riyadh. His insights enriched my understanding and appreciation of the city, making every site we visited more memorable.
 
 Among the profound experiences in Riyadh was performing Umrah. This spiritual journey, a moment of deep reflection and connection, was heightened by the surrounding ambiance of devotion and peace. The experience of walking in the steps of millions before me, at the Grand Mosque, added a profound layer of significance to my visit.
 
-Riyadh captivated me with its lively atmosphere, warm people, and the profound spiritual experience. My time there, spent reconnecting with a dear friend and immersing myself in the local culture and spiritual practices, was not just memorable—it was deeply enriching.`
+Riyadh captivated me with its lively atmosphere, warm people, and the profound spiritual experience. My time there, spent reconnecting with a dear friend and immersing myself in the local culture and spiritual practices, was not just memorable, it was deeply enriching.`
   },
   {
     city: "Prague",
@@ -362,7 +362,7 @@ But it was the peacefulness and the majestic views that truly enchanted me. Stan
     cover: "assets/img/travel/oldenburg.jpg",
     content: `Leaving Dresden behind, I embarked on a train journey to Oldenburg to visit my uncle. The route to Oldenburg was unexpectedly breathtaking, a picturesque voyage through the heart of the countryside. As the train sliced through expansive fields and past quaint farmhouses, I was treated to views of lush agriculture and pastoral landscapes that seemed to stretch endlessly. It was a side of Germany often overshadowed by its urban counterparts, yet no less magnificent.
 
-Upon arriving in Oldenburg, I was greeted by the quiet charm of this small city. Its beauty lay in its simplicity and tranquility—narrow streets lined with traditional German architecture, small cafes filled with the aroma of fresh coffee and pastries, and the gentle buzz of daily life that moved at a relaxed, almost leisurely pace.
+Upon arriving in Oldenburg, I was greeted by the quiet charm of this small city. Its beauty lay in its simplicity and tranquility, narrow streets lined with traditional German architecture, small cafes filled with the aroma of fresh coffee and pastries, and the gentle buzz of daily life that moved at a relaxed, almost leisurely pace.
 
 Oldenburg's serene environment provided a stark contrast to the bustling energy of the larger cities I'd visited. Here, in the calm of this lovely town, I found a perfect space for reflection and connection with family, making my stay not just a visit, but a cherished memory.`
   },
